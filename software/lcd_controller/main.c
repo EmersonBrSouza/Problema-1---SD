@@ -26,6 +26,7 @@
 #define MOVE_MESSAGE_TO_RIGHT 0x1C
 
 void startDisplay (int num_bits);
+void writeMessage (char* text);
 void sleep (int milliseconds);
 
 int main () {
@@ -33,12 +34,17 @@ int main () {
 }
 
 void startDisplay (int num_bits) {
+	sleep(20);
 	IOWR(0,0,num_bits);
+	IOWR(0,0,CLEAR_DISPLAY);
+}
+
+void writeMessage (char* text) {
+
 }
 
 void sleep (int milliseconds) {
-	int clock = milliseconds * 1000;
 	int i = 0;
 
-	while (i < clock) { i++; }
+	while (i < milliseconds) { i++; }
 }
