@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Mon Sep 24 23:01:55 2018
-Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Analysis & Synthesis Status : Successful - Sat Oct 06 22:16:11 2018
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : LCD_Controller
 Top-level Entity Name : Main
 Family : Cyclone IV E
-Total logic elements : 1,406
-    Total combinational functions : 1,263
-    Dedicated logic registers : 726
-Total registers : 726
-Total pins : 2
+Total logic elements : 1,575
+    Total combinational functions : 1,419
+    Dedicated logic registers : 786
+Total registers : 786
+Total pins : 16
 Total virtual pins : 0
 Total memory bits : 331,008
 Embedded Multiplier 9-bit elements : 0

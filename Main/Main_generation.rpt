@@ -1,0 +1,106 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate D:\Downloads\Uefs\2018.2\MI-Sistemas_Digitais\Problema1\Main.qsys --block-symbol-file --output-directory=D:\Downloads\Uefs\2018.2\MI-Sistemas_Digitais\Problema1\Main --family="Cyclone IV E" --part=EP4CE30F23C7
+Progress: Loading Problema1/Main.qsys
+Progress: Reading input file
+Progress: Adding ControllerLCD_0 [ControllerLCD 1.0]
+Progress: Parameterizing module ControllerLCD_0
+Progress: Adding lcd_output [altera_avalon_pio 18.1]
+Progress: Parameterizing module lcd_output
+Progress: Adding main_clock [clock_source 18.1]
+Progress: Parameterizing module main_clock
+Progress: Adding main_memory [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module main_memory
+Progress: Adding nios2_processor [altera_nios2_gen2 18.1]
+Progress: Parameterizing module nios2_processor
+Progress: Adding push_buttons [altera_avalon_pio 18.1]
+Progress: Parameterizing module push_buttons
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: Main.push_buttons: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate D:\Downloads\Uefs\2018.2\MI-Sistemas_Digitais\Problema1\Main.qsys --synthesis=VERILOG --output-directory=D:\Downloads\Uefs\2018.2\MI-Sistemas_Digitais\Problema1\Main\synthesis --family="Cyclone IV E" --part=EP4CE30F23C7
+Progress: Loading Problema1/Main.qsys
+Progress: Reading input file
+Progress: Adding ControllerLCD_0 [ControllerLCD 1.0]
+Progress: Parameterizing module ControllerLCD_0
+Progress: Adding lcd_output [altera_avalon_pio 18.1]
+Progress: Parameterizing module lcd_output
+Progress: Adding main_clock [clock_source 18.1]
+Progress: Parameterizing module main_clock
+Progress: Adding main_memory [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module main_memory
+Progress: Adding nios2_processor [altera_nios2_gen2 18.1]
+Progress: Parameterizing module nios2_processor
+Progress: Adding push_buttons [altera_avalon_pio 18.1]
+Progress: Parameterizing module push_buttons
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: Main.push_buttons: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: Main: Generating Main "Main" for QUARTUS_SYNTH
+Warning: Main: "No matching role found for nios2_processor:custom_instruction_master:E_ci_multi_clock (clk)"
+Warning: Main: "No matching role found for nios2_processor:custom_instruction_master:E_ci_multi_reset_req (reset_req)"
+Warning: Main: "No matching role found for nios2_processor:custom_instruction_master:E_ci_multi_reset (reset)"
+Info: ControllerLCD_0: "Main" instantiated ControllerLCD "ControllerLCD_0"
+Info: lcd_output: Starting RTL generation for module 'Main_lcd_output'
+Info: lcd_output:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Main_lcd_output --dir=C:/Users/T-Gamer/AppData/Local/Temp/alt7811_6650646638281375441.dir/0052_lcd_output_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/T-Gamer/AppData/Local/Temp/alt7811_6650646638281375441.dir/0052_lcd_output_gen//Main_lcd_output_component_configuration.pl  --do_build_sim=0  ]
+Info: lcd_output: Done RTL generation for module 'Main_lcd_output'
+Info: lcd_output: "Main" instantiated altera_avalon_pio "lcd_output"
+Info: main_memory: Starting RTL generation for module 'Main_main_memory'
+Info: main_memory:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=Main_main_memory --dir=C:/Users/T-Gamer/AppData/Local/Temp/alt7811_6650646638281375441.dir/0053_main_memory_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/T-Gamer/AppData/Local/Temp/alt7811_6650646638281375441.dir/0053_main_memory_gen//Main_main_memory_component_configuration.pl  --do_build_sim=0  ]
+Info: main_memory: Done RTL generation for module 'Main_main_memory'
+Info: main_memory: "Main" instantiated altera_avalon_onchip_memory2 "main_memory"
+Info: nios2_processor: "Main" instantiated altera_nios2_gen2 "nios2_processor"
+Info: push_buttons: Starting RTL generation for module 'Main_push_buttons'
+Info: push_buttons:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Main_push_buttons --dir=C:/Users/T-Gamer/AppData/Local/Temp/alt7811_6650646638281375441.dir/0054_push_buttons_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/T-Gamer/AppData/Local/Temp/alt7811_6650646638281375441.dir/0054_push_buttons_gen//Main_push_buttons_component_configuration.pl  --do_build_sim=0  ]
+Info: push_buttons: Done RTL generation for module 'Main_push_buttons'
+Info: push_buttons: "Main" instantiated altera_avalon_pio "push_buttons"
+Info: nios2_processor_custom_instruction_master_translator: "Main" instantiated altera_customins_master_translator "nios2_processor_custom_instruction_master_translator"
+Info: nios2_processor_custom_instruction_master_comb_xconnect: "Main" instantiated altera_customins_xconnect "nios2_processor_custom_instruction_master_comb_xconnect"
+Info: nios2_processor_custom_instruction_master_comb_slave_translator0: "Main" instantiated altera_customins_slave_translator "nios2_processor_custom_instruction_master_comb_slave_translator0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "Main" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "Main" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "Main" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'Main_nios2_processor_cpu'
+Info: cpu:   Generation command is [exec D:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I D:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I D:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I D:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I D:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- D:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=Main_nios2_processor_cpu --dir=C:/Users/T-Gamer/AppData/Local/Temp/alt7811_6650646638281375441.dir/0060_cpu_gen/ --quartus_bindir=D:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/T-Gamer/AppData/Local/Temp/alt7811_6650646638281375441.dir/0060_cpu_gen//Main_nios2_processor_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2018.10.06 22:09:24 (*) Starting Nios II generation
+Info: cpu: # 2018.10.06 22:09:24 (*)   Checking for plaintext license.
+Info: cpu: # 2018.10.06 22:09:24 (*)   Couldn't query license setup in Quartus directory D:/intelFPGA_lite/18.1/quartus/bin64/
+Info: cpu: # 2018.10.06 22:09:24 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2018.10.06 22:09:24 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2018.10.06 22:09:24 (*)   Plaintext license not found.
+Info: cpu: # 2018.10.06 22:09:24 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2018.10.06 22:09:24 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2018.10.06 22:09:24 (*)   Creating all objects for CPU
+Info: cpu: # 2018.10.06 22:09:25 (*)   Generating RTL from CPU objects
+Info: cpu: # 2018.10.06 22:09:25 (*)   Creating plain-text RTL
+Info: cpu: # 2018.10.06 22:09:26 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'Main_nios2_processor_cpu'
+Info: cpu: "nios2_processor" instantiated altera_nios2_gen2_unit "cpu"
+Info: nios2_processor_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_processor_data_master_translator"
+Info: nios2_processor_debug_mem_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "nios2_processor_debug_mem_slave_translator"
+Info: nios2_processor_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios2_processor_data_master_agent"
+Info: nios2_processor_debug_mem_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "nios2_processor_debug_mem_slave_agent"
+Info: nios2_processor_debug_mem_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "nios2_processor_debug_mem_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file D:/Downloads/Uefs/2018.2/MI-Sistemas_Digitais/Problema1/Main/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: Main: Done "Main" with 26 modules, 40 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

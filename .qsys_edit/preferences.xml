@@ -3,7 +3,7 @@
  <debug showDebugMenu="0" />
  <systemtable>
   <columns>
-   <connections preferredWidth="111" />
+   <connections preferredWidth="143" />
    <irq preferredWidth="34" />
   </columns>
  </systemtable>
@@ -14,8 +14,8 @@
    <frequency preferredWidth="250" />
   </columns>
  </clocktable>
- <window width="1100" height="800" x="397" y="11" />
- <library expandedCategories="Library,Project/CustomLogic,Project" />
- <generation simulation="VERILOG" />
+ <window width="1100" height="799" x="397" y="12" />
+ <library expandedCategories="Project,Library,Project/CustomLogic" />
+ <generation simulation="NONE" />
  <hdlexample language="VERILOG" />
 </preferences>

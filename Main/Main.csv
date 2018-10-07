@@ -1,0 +1,27 @@
+# system info Main on 2018.10.06.22:08:02
+system_info:
+name,value
+DEVICE,EP4CE30F23C7
+DEVICE_FAMILY,Cyclone IV E
+GENERATION_ID,1538874480
+#
+#
+# Files generated for Main on 2018.10.06.22:08:02
+files:
+filepath,kind,attributes,module,is_top
+simulation/Main.v,VERILOG,,Main,true
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+Main.ControllerLCD_0,Main_ControllerLCD_0
+Main.lcd_output,Main_lcd_output
+Main.main_memory,Main_main_memory
+Main.nios2_processor,Main_nios2_processor
+Main.push_buttons,Main_push_buttons
+Main.nios2_processor_custom_instruction_master_translator,altera_customins_master_translator
+Main.nios2_processor_custom_instruction_master_comb_xconnect,Main_nios2_processor_custom_instruction_master_comb_xconnect
+Main.nios2_processor_custom_instruction_master_comb_slave_translator0,altera_customins_slave_translator
+Main.mm_interconnect_0,Main_mm_interconnect_0
+Main.irq_mapper,Main_irq_mapper
+Main.rst_controller,altera_reset_controller

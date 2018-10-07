@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file path="simulation/Main.v" type="VERILOG" />
+ <topLevel name="Main" />
+ <deviceFamily name="cycloneive" />
+ <modelMap controllerPath="Main.main_memory" modelPath="Main.main_memory" />
+</simPackage>
