@@ -10,4 +10,8 @@ module ControllerLCD(
 // Wire Declaration
 // Integer Declaration
 // Concurrent Assignment
+	
+	always @(dataa) begin
+		
+	end
 endmodule

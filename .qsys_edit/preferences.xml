@@ -15,7 +15,7 @@
   </columns>
  </clocktable>
  <window width="1100" height="799" x="397" y="12" />
- <library expandedCategories="Project,Library,Project/CustomLogic" />
+ <library expandedCategories="Library,Project/CustomLogic,Project" />
  <generation simulation="NONE" />
  <hdlexample language="VERILOG" />
 </preferences>
