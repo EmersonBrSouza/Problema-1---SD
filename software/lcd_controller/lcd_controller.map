@@ -4,8 +4,6 @@ Archive member included to satisfy reference by file (symbol)
                               ../lcd_controller_bsp//obj/HAL/src/crt0.o (alt_load)
 ../lcd_controller_bsp/\libhal_bsp.a(alt_main.o)
                               ../lcd_controller_bsp//obj/HAL/src/crt0.o (alt_main)
-../lcd_controller_bsp/\libhal_bsp.a(alt_putstr.o)
-                              obj/default/hello_world_small.o (alt_putstr)
 ../lcd_controller_bsp/\libhal_bsp.a(alt_sys_init.o)
                               ../lcd_controller_bsp/\libhal_bsp.a(alt_main.o) (alt_irq_init)
 ../lcd_controller_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
@@ -14,31 +12,6 @@ Archive member included to satisfy reference by file (symbol)
                               ../lcd_controller_bsp/\libhal_bsp.a(alt_load.o) (alt_icache_flush_all)
 ../lcd_controller_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
                               ../lcd_controller_bsp/\libhal_bsp.a(alt_sys_init.o) (altera_nios2_gen2_irq_init)
-d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fputs.o)
-                              ../lcd_controller_bsp/\libhal_bsp.a(alt_putstr.o) (fputs)
-d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
-                              d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fputs.o) (__sfvwrite_small_dev)
-d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
-                              ../lcd_controller_bsp/\libhal_bsp.a(alt_putstr.o) (_impure_ptr)
-d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
-                              d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fputs.o) (strlen)
-d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
-                              d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o) (_write_r)
-d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
-                              d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o) (errno)
-../lcd_controller_bsp/\libhal_bsp.a(alt_write.o)
-                              d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o) (write)
-../lcd_controller_bsp/\libhal_bsp.a(alt_dev.o)
-                              ../lcd_controller_bsp/\libhal_bsp.a(alt_write.o) (alt_fd_list)
-../lcd_controller_bsp/\libhal_bsp.a(alt_errno.o)
-                              ../lcd_controller_bsp/\libhal_bsp.a(alt_write.o) (alt_errno)
-d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
-                              ../lcd_controller_bsp/\libhal_bsp.a(alt_write.o) (__mulsi3)
-
-Allocating common symbols
-Common symbol       size              file
-
-errno               0x4               d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
 
 Memory Configuration
 
@@ -97,7 +70,7 @@ LOAD d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
                 0x0000000000010020                PROVIDE (__ram_exceptions_end, ABSOLUTE (.))
                 0x0000000000010020                PROVIDE (__flash_exceptions_start, LOADADDR (.exceptions))
 
-.text           0x0000000000010020      0x43c
+.text           0x0000000000010020      0x284
                 [!provide]                        PROVIDE (stext, ABSOLUTE (.))
  *(.interp)
  *(.hash)
@@ -144,53 +117,39 @@ LOAD d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
  *(.text .stub .text.* .gnu.linkonce.t.*)
  .text          0x0000000000010020       0x3c ../lcd_controller_bsp//obj/HAL/src/crt0.o
                 0x0000000000010020                _start
- .text          0x000000000001005c        0x0 obj/default/hello_world_small.o
- .text.startup  0x000000000001005c       0x18 obj/default/hello_world_small.o
-                0x000000000001005c                main
- .text          0x0000000000010074       0xe0 ../lcd_controller_bsp/\libhal_bsp.a(alt_load.o)
-                0x0000000000010074                alt_load
- .text          0x0000000000010154       0x2c ../lcd_controller_bsp/\libhal_bsp.a(alt_main.o)
-                0x0000000000010154                alt_main
- .text          0x0000000000010180        0xc ../lcd_controller_bsp/\libhal_bsp.a(alt_putstr.o)
-                0x0000000000010180                alt_putstr
- .text          0x000000000001018c       0x24 ../lcd_controller_bsp/\libhal_bsp.a(alt_sys_init.o)
-                0x000000000001018c                alt_irq_init
-                0x00000000000101ac                alt_sys_init
- .text          0x00000000000101b0        0x4 ../lcd_controller_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
-                0x00000000000101b0                alt_dcache_flush_all
- .text          0x00000000000101b4        0x4 ../lcd_controller_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
-                0x00000000000101b4                alt_icache_flush_all
- .text          0x00000000000101b8        0x8 ../lcd_controller_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
-                0x00000000000101b8                altera_nios2_gen2_irq_init
- .text          0x00000000000101c0        0x0 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fputs.o)
- .text.fputs    0x00000000000101c0       0x58 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fputs.o)
-                0x00000000000101c0                fputs
- .text          0x0000000000010218        0x0 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
- .text.__sfvwrite_small_dev
-                0x0000000000010218       0xb8 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
-                0x0000000000010218                __sfvwrite_small_dev
- .text          0x00000000000102d0        0x0 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
- .text          0x00000000000102d0        0x0 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
- .text.strlen   0x00000000000102d0       0x1c d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
-                0x00000000000102d0                strlen
- .text          0x00000000000102ec        0x0 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
- .text._write_r
-                0x00000000000102ec       0x58 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
-                0x00000000000102ec                _write_r
- .text          0x0000000000010344        0x0 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
- .text          0x0000000000010344       0xe8 ../lcd_controller_bsp/\libhal_bsp.a(alt_write.o)
-                0x0000000000010358                write
- .text          0x000000000001042c        0x8 ../lcd_controller_bsp/\libhal_bsp.a(alt_dev.o)
- .text          0x0000000000010434        0x0 ../lcd_controller_bsp/\libhal_bsp.a(alt_errno.o)
- .text          0x0000000000010434       0x28 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
-                0x0000000000010434                __mulsi3
+ .text          0x000000000001005c       0xc0 obj/default/hello_world_small.o
+                0x000000000001005c                initializeDisplayViaHardware
+                0x0000000000010084                initializeDisplayViaSoftware
+                0x00000000000100b0                nextOption
+                0x00000000000100c8                previousOption
+                0x00000000000100dc                showOption
+                0x00000000000100e8                enterOption
+                0x00000000000100f4                exitOption
+                0x0000000000010100                sleep
+                0x0000000000010104                writeWord
+                0x0000000000010110                clearScreen
+ .text.startup  0x000000000001011c       0x48 obj/default/hello_world_small.o
+                0x000000000001011c                main
+ .text          0x0000000000010164       0xe0 ../lcd_controller_bsp/\libhal_bsp.a(alt_load.o)
+                0x0000000000010164                alt_load
+ .text          0x0000000000010244       0x2c ../lcd_controller_bsp/\libhal_bsp.a(alt_main.o)
+                0x0000000000010244                alt_main
+ .text          0x0000000000010270       0x24 ../lcd_controller_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x0000000000010270                alt_irq_init
+                0x0000000000010290                alt_sys_init
+ .text          0x0000000000010294        0x4 ../lcd_controller_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                0x0000000000010294                alt_dcache_flush_all
+ .text          0x0000000000010298        0x4 ../lcd_controller_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                0x0000000000010298                alt_icache_flush_all
+ .text          0x000000000001029c        0x8 ../lcd_controller_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+                0x000000000001029c                altera_nios2_gen2_irq_init
  *(.gnu.warning.*)
  *(.fini)
                 [!provide]                        PROVIDE (__etext, ABSOLUTE (.))
                 [!provide]                        PROVIDE (_etext, ABSOLUTE (.))
                 [!provide]                        PROVIDE (etext, ABSOLUTE (.))
  *(.eh_frame_hdr)
-                0x000000000001045c                . = ALIGN (0x4)
+                0x00000000000102a4                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__preinit_array_start, ABSOLUTE (.))
  *(.preinit_array)
                 [!provide]                        PROVIDE (__preinit_array_end, ABSOLUTE (.))
@@ -212,125 +171,79 @@ LOAD d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
  *(SORT(.dtors.*))
                 [!provide]                        PROVIDE (__DTOR_END__, ABSOLUTE (.))
  *(.jcr)
-                0x000000000001045c                . = ALIGN (0x4)
+                0x00000000000102a4                . = ALIGN (0x4)
 
-.rodata         0x000000000001045c       0x24
-                0x000000000001045c                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
-                0x000000000001045c                . = ALIGN (0x4)
+.rodata         0x00000000000102a4        0x0
+                0x00000000000102a4                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
+                0x00000000000102a4                . = ALIGN (0x4)
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata.str1.4
-                0x000000000001045c       0x15 obj/default/hello_world_small.o
- *fill*         0x0000000000010471        0x3 
- .rodata.str1.4
-                0x0000000000010474        0xc ../lcd_controller_bsp/\libhal_bsp.a(alt_dev.o)
-                                          0xa (size before relaxing)
  *(.rodata1)
-                0x0000000000010480                . = ALIGN (0x4)
-                0x0000000000010480                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
-                0x000000000001045c                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
+                0x00000000000102a4                . = ALIGN (0x4)
+                0x00000000000102a4                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
+                0x00000000000102a4                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
 
-.rwdata         0x0000000000010480      0x158 load address 0x00000000000105d8
-                0x0000000000010480                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
-                0x0000000000010480                . = ALIGN (0x4)
+.rwdata         0x00000000000102a4        0x0
+                0x00000000000102a4                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
+                0x00000000000102a4                . = ALIGN (0x4)
  *(.got.plt)
  *(.got)
  *(.data1)
  *(.data .data.* .gnu.linkonce.d.*)
- .data          0x0000000000010480        0x0 ../lcd_controller_bsp//obj/HAL/src/crt0.o
- .data          0x0000000000010480        0x0 obj/default/hello_world_small.o
- .data          0x0000000000010480        0x0 ../lcd_controller_bsp/\libhal_bsp.a(alt_load.o)
- .data          0x0000000000010480        0x0 ../lcd_controller_bsp/\libhal_bsp.a(alt_main.o)
- .data          0x0000000000010480        0x0 ../lcd_controller_bsp/\libhal_bsp.a(alt_putstr.o)
- .data          0x0000000000010480        0x0 ../lcd_controller_bsp/\libhal_bsp.a(alt_sys_init.o)
- .data          0x0000000000010480        0x0 ../lcd_controller_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .data          0x0000000000010480        0x0 ../lcd_controller_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .data          0x0000000000010480        0x0 ../lcd_controller_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
- .data          0x0000000000010480        0x0 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fputs.o)
- .data          0x0000000000010480        0x0 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
- .data          0x0000000000010480        0x0 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
- .data.impure_data
-                0x0000000000010480       0xe0 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
- .data          0x0000000000010560        0x0 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
- .data          0x0000000000010560        0x0 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
- .data          0x0000000000010560        0x0 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
- .data          0x0000000000010560        0x0 ../lcd_controller_bsp/\libhal_bsp.a(alt_write.o)
- .data          0x0000000000010560       0x58 ../lcd_controller_bsp/\libhal_bsp.a(alt_dev.o)
-                0x0000000000010560                alt_fd_list
-                0x0000000000010590                alt_dev_null
- .data          0x00000000000105b8        0x0 ../lcd_controller_bsp/\libhal_bsp.a(alt_errno.o)
- .data          0x00000000000105b8        0x0 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
-                0x00000000000185b8                _gp = ABSOLUTE ((. + 0x8000))
+ .data          0x00000000000102a4        0x0 ../lcd_controller_bsp//obj/HAL/src/crt0.o
+ .data          0x00000000000102a4        0x0 obj/default/hello_world_small.o
+ .data          0x00000000000102a4        0x0 ../lcd_controller_bsp/\libhal_bsp.a(alt_load.o)
+ .data          0x00000000000102a4        0x0 ../lcd_controller_bsp/\libhal_bsp.a(alt_main.o)
+ .data          0x00000000000102a4        0x0 ../lcd_controller_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .data          0x00000000000102a4        0x0 ../lcd_controller_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .data          0x00000000000102a4        0x0 ../lcd_controller_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .data          0x00000000000102a4        0x0 ../lcd_controller_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+                0x00000000000182a4                _gp = ABSOLUTE ((. + 0x8000))
                 [!provide]                        PROVIDE (gp, _gp)
  *(.rwdata .rwdata.*)
  *(.sdata .sdata.* .gnu.linkonce.s.*)
- .sdata._global_impure_ptr
-                0x00000000000105b8        0x4 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
-                0x00000000000105b8                _global_impure_ptr
- .sdata._impure_ptr
-                0x00000000000105bc        0x4 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
-                0x00000000000105bc                _impure_ptr
- .sdata         0x00000000000105c0       0x14 ../lcd_controller_bsp/\libhal_bsp.a(alt_dev.o)
-                0x00000000000105c0                alt_max_fd
-                0x00000000000105c4                alt_dev_list
-                0x00000000000105cc                alt_fs_list
- .sdata         0x00000000000105d4        0x4 ../lcd_controller_bsp/\libhal_bsp.a(alt_errno.o)
-                0x00000000000105d4                alt_errno
  *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
-                0x00000000000105d8                . = ALIGN (0x4)
-                0x00000000000105d8                _edata = ABSOLUTE (.)
+                0x00000000000102a4                . = ALIGN (0x4)
+                0x00000000000102a4                _edata = ABSOLUTE (.)
                 [!provide]                        PROVIDE (edata, ABSOLUTE (.))
-                0x00000000000105d8                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
-                0x00000000000105d8                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
+                0x00000000000102a4                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
+                0x00000000000102a4                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
 
-.bss            0x0000000000010730       0x10
-                0x0000000000010730                __bss_start = ABSOLUTE (.)
+.bss            0x00000000000102a4        0xc
+                0x00000000000102a4                __bss_start = ABSOLUTE (.)
                 [!provide]                        PROVIDE (__sbss_start, ABSOLUTE (.))
                 [!provide]                        PROVIDE (___sbss_start, ABSOLUTE (.))
  *(.dynsbss)
  *(.sbss .sbss.* .gnu.linkonce.sb.*)
- .sbss          0x0000000000010730        0xc ../lcd_controller_bsp/\libhal_bsp.a(alt_main.o)
-                0x0000000000010730                alt_envp
-                0x0000000000010734                alt_argv
-                0x0000000000010738                alt_argc
- .sbss          0x000000000001073c        0x4 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
-                0x000000000001073c                errno
+ .sbss          0x00000000000102a4        0xc ../lcd_controller_bsp/\libhal_bsp.a(alt_main.o)
+                0x00000000000102a4                alt_envp
+                0x00000000000102a8                alt_argv
+                0x00000000000102ac                alt_argc
  *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
  *(.scommon)
                 [!provide]                        PROVIDE (__sbss_end, ABSOLUTE (.))
                 [!provide]                        PROVIDE (___sbss_end, ABSOLUTE (.))
  *(.dynbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x0000000000010740        0x0 ../lcd_controller_bsp//obj/HAL/src/crt0.o
- .bss           0x0000000000010740        0x0 obj/default/hello_world_small.o
- .bss           0x0000000000010740        0x0 ../lcd_controller_bsp/\libhal_bsp.a(alt_load.o)
- .bss           0x0000000000010740        0x0 ../lcd_controller_bsp/\libhal_bsp.a(alt_main.o)
- .bss           0x0000000000010740        0x0 ../lcd_controller_bsp/\libhal_bsp.a(alt_putstr.o)
- .bss           0x0000000000010740        0x0 ../lcd_controller_bsp/\libhal_bsp.a(alt_sys_init.o)
- .bss           0x0000000000010740        0x0 ../lcd_controller_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .bss           0x0000000000010740        0x0 ../lcd_controller_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .bss           0x0000000000010740        0x0 ../lcd_controller_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
- .bss           0x0000000000010740        0x0 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fputs.o)
- .bss           0x0000000000010740        0x0 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
- .bss           0x0000000000010740        0x0 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
- .bss           0x0000000000010740        0x0 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
- .bss           0x0000000000010740        0x0 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
- .bss           0x0000000000010740        0x0 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
- .bss           0x0000000000010740        0x0 ../lcd_controller_bsp/\libhal_bsp.a(alt_write.o)
- .bss           0x0000000000010740        0x0 ../lcd_controller_bsp/\libhal_bsp.a(alt_dev.o)
- .bss           0x0000000000010740        0x0 ../lcd_controller_bsp/\libhal_bsp.a(alt_errno.o)
- .bss           0x0000000000010740        0x0 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .bss           0x00000000000102b0        0x0 ../lcd_controller_bsp//obj/HAL/src/crt0.o
+ .bss           0x00000000000102b0        0x0 obj/default/hello_world_small.o
+ .bss           0x00000000000102b0        0x0 ../lcd_controller_bsp/\libhal_bsp.a(alt_load.o)
+ .bss           0x00000000000102b0        0x0 ../lcd_controller_bsp/\libhal_bsp.a(alt_main.o)
+ .bss           0x00000000000102b0        0x0 ../lcd_controller_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .bss           0x00000000000102b0        0x0 ../lcd_controller_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .bss           0x00000000000102b0        0x0 ../lcd_controller_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .bss           0x00000000000102b0        0x0 ../lcd_controller_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
  *(COMMON)
-                0x0000000000010740                . = ALIGN (0x4)
-                0x0000000000010740                __bss_end = ABSOLUTE (.)
+                0x00000000000102b0                . = ALIGN (0x4)
+                0x00000000000102b0                __bss_end = ABSOLUTE (.)
 
-.main_memory    0x0000000000010740        0x0
+.main_memory    0x00000000000102b0        0x0
                 [!provide]                        PROVIDE (_alt_partition_main_memory_start, ABSOLUTE (.))
  *(.main_memory .main_memory. main_memory.*)
-                0x0000000000010740                . = ALIGN (0x4)
+                0x00000000000102b0                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (_alt_partition_main_memory_end, ABSOLUTE (.))
-                0x0000000000010740                _end = ABSOLUTE (.)
-                0x0000000000010740                end = ABSOLUTE (.)
-                0x0000000000010740                __alt_stack_base = ABSOLUTE (.)
+                0x00000000000102b0                _end = ABSOLUTE (.)
+                0x00000000000102b0                end = ABSOLUTE (.)
+                0x00000000000102b0                __alt_stack_base = ABSOLUTE (.)
                 [!provide]                        PROVIDE (_alt_partition_main_memory_load_addr, LOADADDR (.main_memory))
 
 .stab
@@ -357,21 +270,10 @@ LOAD d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
                                          0x24 (size before relaxing)
  .comment       0x0000000000000023       0x24 ../lcd_controller_bsp/\libhal_bsp.a(alt_load.o)
  .comment       0x0000000000000023       0x24 ../lcd_controller_bsp/\libhal_bsp.a(alt_main.o)
- .comment       0x0000000000000023       0x24 ../lcd_controller_bsp/\libhal_bsp.a(alt_putstr.o)
  .comment       0x0000000000000023       0x24 ../lcd_controller_bsp/\libhal_bsp.a(alt_sys_init.o)
  .comment       0x0000000000000023       0x24 ../lcd_controller_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
  .comment       0x0000000000000023       0x24 ../lcd_controller_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
  .comment       0x0000000000000023       0x24 ../lcd_controller_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
- .comment       0x0000000000000023       0x24 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fputs.o)
- .comment       0x0000000000000023       0x24 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
- .comment       0x0000000000000023       0x24 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
- .comment       0x0000000000000023       0x24 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
- .comment       0x0000000000000023       0x24 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
- .comment       0x0000000000000023       0x24 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
- .comment       0x0000000000000023       0x24 ../lcd_controller_bsp/\libhal_bsp.a(alt_write.o)
- .comment       0x0000000000000023       0x24 ../lcd_controller_bsp/\libhal_bsp.a(alt_dev.o)
- .comment       0x0000000000000023       0x24 ../lcd_controller_bsp/\libhal_bsp.a(alt_errno.o)
- .comment       0x0000000000000023       0x24 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
 
 .debug
  *(.debug)
@@ -385,183 +287,92 @@ LOAD d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x0000000000000000      0x250
+.debug_aranges  0x0000000000000000      0x110
  *(.debug_aranges)
  .debug_aranges
                 0x0000000000000000       0x28 ../lcd_controller_bsp//obj/HAL/src/crt0.o
  .debug_aranges
-                0x0000000000000028       0x20 obj/default/hello_world_small.o
+                0x0000000000000028       0x28 obj/default/hello_world_small.o
  .debug_aranges
-                0x0000000000000048       0x20 ../lcd_controller_bsp/\libhal_bsp.a(alt_load.o)
+                0x0000000000000050       0x20 ../lcd_controller_bsp/\libhal_bsp.a(alt_load.o)
  .debug_aranges
-                0x0000000000000068       0x20 ../lcd_controller_bsp/\libhal_bsp.a(alt_main.o)
+                0x0000000000000070       0x20 ../lcd_controller_bsp/\libhal_bsp.a(alt_main.o)
  .debug_aranges
-                0x0000000000000088       0x20 ../lcd_controller_bsp/\libhal_bsp.a(alt_putstr.o)
+                0x0000000000000090       0x20 ../lcd_controller_bsp/\libhal_bsp.a(alt_sys_init.o)
  .debug_aranges
-                0x00000000000000a8       0x20 ../lcd_controller_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x00000000000000b0       0x20 ../lcd_controller_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
  .debug_aranges
-                0x00000000000000c8       0x20 ../lcd_controller_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                0x00000000000000d0       0x20 ../lcd_controller_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
  .debug_aranges
-                0x00000000000000e8       0x20 ../lcd_controller_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .debug_aranges
-                0x0000000000000108       0x20 ../lcd_controller_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
- .debug_aranges
-                0x0000000000000128       0x20 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fputs.o)
- .debug_aranges
-                0x0000000000000148       0x20 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
- .debug_aranges
-                0x0000000000000168       0x18 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
- .debug_aranges
-                0x0000000000000180       0x20 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
- .debug_aranges
-                0x00000000000001a0       0x20 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
- .debug_aranges
-                0x00000000000001c0       0x18 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
- .debug_aranges
-                0x00000000000001d8       0x20 ../lcd_controller_bsp/\libhal_bsp.a(alt_write.o)
- .debug_aranges
-                0x00000000000001f8       0x20 ../lcd_controller_bsp/\libhal_bsp.a(alt_dev.o)
- .debug_aranges
-                0x0000000000000218       0x18 ../lcd_controller_bsp/\libhal_bsp.a(alt_errno.o)
- .debug_aranges
-                0x0000000000000230       0x20 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+                0x00000000000000f0       0x20 ../lcd_controller_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x3463
+.debug_info     0x0000000000000000      0xa00
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000       0x88 ../lcd_controller_bsp//obj/HAL/src/crt0.o
- .debug_info    0x0000000000000088       0x76 obj/default/hello_world_small.o
- .debug_info    0x00000000000000fe      0x1c9 ../lcd_controller_bsp/\libhal_bsp.a(alt_load.o)
- .debug_info    0x00000000000002c7      0x18f ../lcd_controller_bsp/\libhal_bsp.a(alt_main.o)
- .debug_info    0x0000000000000456      0x8c5 ../lcd_controller_bsp/\libhal_bsp.a(alt_putstr.o)
- .debug_info    0x0000000000000d1b      0x10f ../lcd_controller_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_info    0x0000000000000e2a       0x92 ../lcd_controller_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_info    0x0000000000000ebc       0x92 ../lcd_controller_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .debug_info    0x0000000000000f4e       0xb8 ../lcd_controller_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
- .debug_info    0x0000000000001006      0x620 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fputs.o)
- .debug_info    0x0000000000001626      0x62b d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
- .debug_info    0x0000000000001c51      0x5a9 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
- .debug_info    0x00000000000021fa       0xc9 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
- .debug_info    0x00000000000022c3      0x630 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
- .debug_info    0x00000000000028f3       0x8a d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
- .debug_info    0x000000000000297d      0x4f3 ../lcd_controller_bsp/\libhal_bsp.a(alt_write.o)
- .debug_info    0x0000000000002e70      0x499 ../lcd_controller_bsp/\libhal_bsp.a(alt_dev.o)
- .debug_info    0x0000000000003309       0xa6 ../lcd_controller_bsp/\libhal_bsp.a(alt_errno.o)
- .debug_info    0x00000000000033af       0xb4 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_info    0x0000000000000088      0x335 obj/default/hello_world_small.o
+ .debug_info    0x00000000000003bd      0x1c9 ../lcd_controller_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_info    0x0000000000000586      0x18f ../lcd_controller_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_info    0x0000000000000715      0x10f ../lcd_controller_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_info    0x0000000000000824       0x92 ../lcd_controller_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_info    0x00000000000008b6       0x92 ../lcd_controller_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_info    0x0000000000000948       0xb8 ../lcd_controller_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
 
-.debug_abbrev   0x0000000000000000      0xffc
+.debug_abbrev   0x0000000000000000      0x50c
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000       0x12 ../lcd_controller_bsp//obj/HAL/src/crt0.o
- .debug_abbrev  0x0000000000000012       0x7c obj/default/hello_world_small.o
- .debug_abbrev  0x000000000000008e       0xd8 ../lcd_controller_bsp/\libhal_bsp.a(alt_load.o)
- .debug_abbrev  0x0000000000000166       0xf5 ../lcd_controller_bsp/\libhal_bsp.a(alt_main.o)
- .debug_abbrev  0x000000000000025b      0x1da ../lcd_controller_bsp/\libhal_bsp.a(alt_putstr.o)
- .debug_abbrev  0x0000000000000435       0xd8 ../lcd_controller_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_abbrev  0x000000000000050d       0x42 ../lcd_controller_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_abbrev  0x000000000000054f       0x42 ../lcd_controller_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .debug_abbrev  0x0000000000000591       0x67 ../lcd_controller_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
- .debug_abbrev  0x00000000000005f8      0x1ae d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fputs.o)
- .debug_abbrev  0x00000000000007a6      0x1bc d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
- .debug_abbrev  0x0000000000000962      0x14a d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
- .debug_abbrev  0x0000000000000aac       0x7f d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
- .debug_abbrev  0x0000000000000b2b      0x1a6 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
- .debug_abbrev  0x0000000000000cd1       0x37 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
- .debug_abbrev  0x0000000000000d08      0x152 ../lcd_controller_bsp/\libhal_bsp.a(alt_write.o)
- .debug_abbrev  0x0000000000000e5a       0xd9 ../lcd_controller_bsp/\libhal_bsp.a(alt_dev.o)
- .debug_abbrev  0x0000000000000f33       0x5a ../lcd_controller_bsp/\libhal_bsp.a(alt_errno.o)
- .debug_abbrev  0x0000000000000f8d       0x6f d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_abbrev  0x0000000000000012      0x16a obj/default/hello_world_small.o
+ .debug_abbrev  0x000000000000017c       0xd8 ../lcd_controller_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_abbrev  0x0000000000000254       0xf5 ../lcd_controller_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_abbrev  0x0000000000000349       0xd8 ../lcd_controller_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_abbrev  0x0000000000000421       0x42 ../lcd_controller_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_abbrev  0x0000000000000463       0x42 ../lcd_controller_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_abbrev  0x00000000000004a5       0x67 ../lcd_controller_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
 
-.debug_line     0x0000000000000000     0x1207
+.debug_line     0x0000000000000000      0x487
  *(.debug_line)
  .debug_line    0x0000000000000000       0x66 ../lcd_controller_bsp//obj/HAL/src/crt0.o
- .debug_line    0x0000000000000066       0x49 obj/default/hello_world_small.o
- .debug_line    0x00000000000000af       0xa4 ../lcd_controller_bsp/\libhal_bsp.a(alt_load.o)
- .debug_line    0x0000000000000153       0xea ../lcd_controller_bsp/\libhal_bsp.a(alt_main.o)
- .debug_line    0x000000000000023d      0x172 ../lcd_controller_bsp/\libhal_bsp.a(alt_putstr.o)
- .debug_line    0x00000000000003af       0xbf ../lcd_controller_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_line    0x000000000000046e       0x4e ../lcd_controller_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_line    0x00000000000004bc       0x4e ../lcd_controller_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .debug_line    0x000000000000050a       0x8c ../lcd_controller_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
- .debug_line    0x0000000000000596      0x1f2 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fputs.o)
- .debug_line    0x0000000000000788      0x1f0 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
- .debug_line    0x0000000000000978      0x156 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
- .debug_line    0x0000000000000ace      0x15c d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
- .debug_line    0x0000000000000c2a      0x1ed d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
- .debug_line    0x0000000000000e17       0x5f d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
- .debug_line    0x0000000000000e76      0x1ca ../lcd_controller_bsp/\libhal_bsp.a(alt_write.o)
- .debug_line    0x0000000000001040       0xf6 ../lcd_controller_bsp/\libhal_bsp.a(alt_dev.o)
- .debug_line    0x0000000000001136       0x51 ../lcd_controller_bsp/\libhal_bsp.a(alt_errno.o)
- .debug_line    0x0000000000001187       0x80 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_line    0x0000000000000066       0xac obj/default/hello_world_small.o
+ .debug_line    0x0000000000000112       0xa4 ../lcd_controller_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_line    0x00000000000001b6       0xea ../lcd_controller_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_line    0x00000000000002a0       0xbf ../lcd_controller_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_line    0x000000000000035f       0x4e ../lcd_controller_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_line    0x00000000000003ad       0x4e ../lcd_controller_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_line    0x00000000000003fb       0x8c ../lcd_controller_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
 
-.debug_frame    0x0000000000000000      0x2b0
+.debug_frame    0x0000000000000000      0x1c0
  *(.debug_frame)
- .debug_frame   0x0000000000000000       0x28 obj/default/hello_world_small.o
- .debug_frame   0x0000000000000028       0x30 ../lcd_controller_bsp/\libhal_bsp.a(alt_load.o)
- .debug_frame   0x0000000000000058       0x2c ../lcd_controller_bsp/\libhal_bsp.a(alt_main.o)
- .debug_frame   0x0000000000000084       0x20 ../lcd_controller_bsp/\libhal_bsp.a(alt_putstr.o)
- .debug_frame   0x00000000000000a4       0x3c ../lcd_controller_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_frame   0x00000000000000e0       0x20 ../lcd_controller_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_frame   0x0000000000000100       0x20 ../lcd_controller_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .debug_frame   0x0000000000000120       0x20 ../lcd_controller_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
- .debug_frame   0x0000000000000140       0x30 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fputs.o)
- .debug_frame   0x0000000000000170       0x58 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
- .debug_frame   0x00000000000001c8       0x20 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
- .debug_frame   0x00000000000001e8       0x38 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
- .debug_frame   0x0000000000000220       0x50 ../lcd_controller_bsp/\libhal_bsp.a(alt_write.o)
- .debug_frame   0x0000000000000270       0x20 ../lcd_controller_bsp/\libhal_bsp.a(alt_dev.o)
- .debug_frame   0x0000000000000290       0x20 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_frame   0x0000000000000000       0xc8 obj/default/hello_world_small.o
+ .debug_frame   0x00000000000000c8       0x30 ../lcd_controller_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_frame   0x00000000000000f8       0x2c ../lcd_controller_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_frame   0x0000000000000124       0x3c ../lcd_controller_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_frame   0x0000000000000160       0x20 ../lcd_controller_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_frame   0x0000000000000180       0x20 ../lcd_controller_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_frame   0x00000000000001a0       0x20 ../lcd_controller_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
 
-.debug_str      0x0000000000000000      0xebc
+.debug_str      0x0000000000000000      0x49c
  *(.debug_str)
- .debug_str     0x0000000000000000       0xb8 obj/default/hello_world_small.o
-                                         0xbd (size before relaxing)
- .debug_str     0x00000000000000b8      0x1d4 ../lcd_controller_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_str     0x0000000000000000      0x1c6 obj/default/hello_world_small.o
+                                        0x1f7 (size before relaxing)
+ .debug_str     0x00000000000001c6      0x17b ../lcd_controller_bsp/\libhal_bsp.a(alt_load.o)
                                         0x256 (size before relaxing)
- .debug_str     0x000000000000028c       0xab ../lcd_controller_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_str     0x0000000000000341       0xb0 ../lcd_controller_bsp/\libhal_bsp.a(alt_main.o)
                                         0x1f8 (size before relaxing)
- .debug_str     0x0000000000000337      0x394 ../lcd_controller_bsp/\libhal_bsp.a(alt_putstr.o)
-                                        0x523 (size before relaxing)
- .debug_str     0x00000000000006cb       0x48 ../lcd_controller_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_str     0x00000000000003f1       0x4d ../lcd_controller_bsp/\libhal_bsp.a(alt_sys_init.o)
                                         0x1cb (size before relaxing)
- .debug_str     0x0000000000000713       0x1f ../lcd_controller_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_str     0x000000000000043e       0x1f ../lcd_controller_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
                                         0x16f (size before relaxing)
- .debug_str     0x0000000000000732       0x1f ../lcd_controller_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_str     0x000000000000045d       0x1f ../lcd_controller_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
                                         0x16f (size before relaxing)
- .debug_str     0x0000000000000751       0x20 ../lcd_controller_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_str     0x000000000000047c       0x20 ../lcd_controller_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
                                         0x19f (size before relaxing)
- .debug_str     0x0000000000000771      0x19e d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fputs.o)
-                                        0x4cc (size before relaxing)
- .debug_str     0x000000000000090f       0x63 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
-                                        0x4d4 (size before relaxing)
- .debug_str     0x0000000000000972       0xef d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
-                                        0x4be (size before relaxing)
- .debug_str     0x0000000000000a61       0xd2 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
-                                        0x1e5 (size before relaxing)
- .debug_str     0x0000000000000b33       0x45 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
-                                        0x4b8 (size before relaxing)
- .debug_str     0x0000000000000b78       0x3f d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
-                                        0x1d8 (size before relaxing)
- .debug_str     0x0000000000000bb7      0x159 ../lcd_controller_bsp/\libhal_bsp.a(alt_write.o)
-                                        0x312 (size before relaxing)
- .debug_str     0x0000000000000d10       0x50 ../lcd_controller_bsp/\libhal_bsp.a(alt_dev.o)
-                                        0x31f (size before relaxing)
- .debug_str     0x0000000000000d60       0x14 ../lcd_controller_bsp/\libhal_bsp.a(alt_errno.o)
-                                        0x15f (size before relaxing)
- .debug_str     0x0000000000000d74      0x148 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
-                                        0x193 (size before relaxing)
 
-.debug_loc      0x0000000000000000      0x3d6
+.debug_loc      0x0000000000000000       0x67
  *(.debug_loc)
- .debug_loc     0x0000000000000000       0x21 ../lcd_controller_bsp/\libhal_bsp.a(alt_putstr.o)
- .debug_loc     0x0000000000000021       0x21 ../lcd_controller_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_loc     0x0000000000000042       0x6b d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fputs.o)
- .debug_loc     0x00000000000000ad      0x110 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
- .debug_loc     0x00000000000001bd       0x1e d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
- .debug_loc     0x00000000000001db       0xa5 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
- .debug_loc     0x0000000000000280       0xc3 ../lcd_controller_bsp/\libhal_bsp.a(alt_write.o)
- .debug_loc     0x0000000000000343       0x93 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_loc     0x0000000000000000       0x46 obj/default/hello_world_small.o
+ .debug_loc     0x0000000000000046       0x21 ../lcd_controller_bsp/\libhal_bsp.a(alt_sys_init.o)
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -590,11 +401,7 @@ LOAD d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
                 [!provide]                        PROVIDE (__alt_heap_limit, 0x19ca0)
 OUTPUT(lcd_controller.elf elf32-littlenios2)
 
-.debug_ranges   0x0000000000000000       0xd0
+.debug_ranges   0x0000000000000000       0x80
  .debug_ranges  0x0000000000000000       0x20 ../lcd_controller_bsp//obj/HAL/src/crt0.o
- .debug_ranges  0x0000000000000020       0x10 obj/default/hello_world_small.o
- .debug_ranges  0x0000000000000030       0x48 ../lcd_controller_bsp/\libhal_bsp.a(alt_load.o)
- .debug_ranges  0x0000000000000078       0x10 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fputs.o)
- .debug_ranges  0x0000000000000088       0x28 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
- .debug_ranges  0x00000000000000b0       0x10 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
- .debug_ranges  0x00000000000000c0       0x10 d:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
+ .debug_ranges  0x0000000000000020       0x18 obj/default/hello_world_small.o
+ .debug_ranges  0x0000000000000038       0x48 ../lcd_controller_bsp/\libhal_bsp.a(alt_load.o)

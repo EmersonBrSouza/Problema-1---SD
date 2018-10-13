@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_processor' in SOPC Builder design 'Main'
  * SOPC Builder design path: ../../Main.sopcinfo
  *
- * Generated: Sun Oct 07 17:31:09 BRT 2018
+ * Generated: Sat Oct 13 14:02:33 BRT 2018
  */
 
 /*
@@ -255,7 +255,7 @@
 #define PUSH_BUTTONS_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define PUSH_BUTTONS_CAPTURE 0
 #define PUSH_BUTTONS_DATA_WIDTH 4
-#define PUSH_BUTTONS_DO_TEST_BENCH_WIRING 0
+#define PUSH_BUTTONS_DO_TEST_BENCH_WIRING 1
 #define PUSH_BUTTONS_DRIVEN_SIM_VALUE 0
 #define PUSH_BUTTONS_EDGE_TYPE "NONE"
 #define PUSH_BUTTONS_FREQ 50000000

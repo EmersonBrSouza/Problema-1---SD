@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Sat Oct 06 22:16:11 2018
+Analysis & Elaboration Status : Successful - Sat Oct 13 10:04:06 2018
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : LCD_Controller
 Top-level Entity Name : Main
 Family : Cyclone IV E
-Total logic elements : 1,575
-    Total combinational functions : 1,419
-    Dedicated logic registers : 786
-Total registers : 786
-Total pins : 16
-Total virtual pins : 0
-Total memory bits : 331,008
-Embedded Multiplier 9-bit elements : 0
-Total PLLs : 0
+Total logic elements : N/A until Partition Merge
+    Total combinational functions : N/A until Partition Merge
+    Dedicated logic registers : N/A until Partition Merge
+Total registers : N/A until Partition Merge
+Total pins : N/A until Partition Merge
+Total virtual pins : N/A until Partition Merge
+Total memory bits : N/A until Partition Merge
+Embedded Multiplier 9-bit elements : N/A until Partition Merge
+Total PLLs : N/A until Partition Merge

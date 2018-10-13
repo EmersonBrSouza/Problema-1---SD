@@ -2833,6 +2833,7 @@ endmodule
 
 module Main_nios2_processor_cpu (
                                   // inputs:
+                                   E_ci_multi_done,
                                    E_ci_result,
                                    clk,
                                    d_readdata,
@@ -2859,9 +2860,11 @@ module Main_nios2_processor_cpu (
                                    D_ci_writerc,
                                    E_ci_dataa,
                                    E_ci_datab,
+                                   E_ci_multi_clk_en,
                                    E_ci_multi_clock,
                                    E_ci_multi_reset,
                                    E_ci_multi_reset_req,
+                                   E_ci_multi_start,
                                    W_ci_estatus,
                                    W_ci_ipending,
                                    W_ci_status,
@@ -2888,9 +2891,11 @@ module Main_nios2_processor_cpu (
   output           D_ci_writerc;
   output  [ 31: 0] E_ci_dataa;
   output  [ 31: 0] E_ci_datab;
+  output           E_ci_multi_clk_en;
   output           E_ci_multi_clock;
   output           E_ci_multi_reset;
   output           E_ci_multi_reset_req;
+  output           E_ci_multi_start;
   output           W_ci_estatus;
   output  [ 31: 0] W_ci_ipending;
   output           W_ci_status;
@@ -2905,6 +2910,7 @@ module Main_nios2_processor_cpu (
   output           debug_reset_request;
   output  [ 17: 0] i_address;
   output           i_read;
+  input            E_ci_multi_done;
   input   [ 31: 0] E_ci_result;
   input            clk;
   input   [ 31: 0] d_readdata;
@@ -3140,10 +3146,12 @@ wire    [ 31: 0] E_arith_src1;
 wire    [ 31: 0] E_arith_src2;
 wire    [ 31: 0] E_ci_dataa;
 wire    [ 31: 0] E_ci_datab;
+reg              E_ci_multi_clk_en;
 wire             E_ci_multi_clock;
 wire             E_ci_multi_reset;
 wire             E_ci_multi_reset_req;
 wire             E_ci_multi_stall;
+reg              E_ci_multi_start;
 wire             E_cmp_result;
 wire    [ 31: 0] E_control_rd_data;
 wire             E_eq;
@@ -3933,7 +3941,6 @@ reg              wait_for_one_post_bret_inst;
   assign E_ci_multi_reset = ~reset_n;
   assign E_ci_multi_reset_req = reset_req;
   //custom_instruction_master, which is an e_custom_instruction_master
-  assign E_ci_multi_stall = 1'b0;
   assign iactive = irq[31 : 0] & 32'b00000000000000000000000000000000;
   assign F_pc_sel_nxt = (R_ctrl_exception | W_rf_ecc_unrecoverable_valid) ? 2'b00 :
     R_ctrl_break                              ? 2'b01 :
@@ -4234,6 +4241,29 @@ defparam Main_nios2_processor_cpu_register_bank_b.lpm_file = "Main_nios2_process
 
   assign E_valid = E_valid_from_R & ~E_rf_ecc_valid_any;
   assign E_stall = (E_shift_rot_stall | E_ld_stall | E_st_stall | E_ci_multi_stall) & ~(E_rf_ecc_valid_any|W_rf_ecc_valid_any|W1_rf_ecc_recoverable_valid);
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          E_ci_multi_start <= 0;
+      else 
+        E_ci_multi_start <= E_ci_multi_start ? 1'b0 : 
+                (R_ctrl_custom_multi & R_valid);
+
+    end
+
+
+  always @(posedge clk or negedge reset_n)
+    begin
+      if (reset_n == 0)
+          E_ci_multi_clk_en <= 0;
+      else 
+        E_ci_multi_clk_en <= E_ci_multi_clk_en ? ~E_ci_multi_done : 
+                (R_ctrl_custom_multi & R_valid);
+
+    end
+
+
+  assign E_ci_multi_stall = R_ctrl_custom_multi & E_valid & ~E_ci_multi_done;
   assign E_arith_src1 = { E_src1[31] ^ E_invert_arith_src_msb, 
     E_src1[30 : 0]};
 
@@ -4666,7 +4696,7 @@ defparam Main_nios2_processor_cpu_register_bank_b.lpm_file = "Main_nios2_process
     end
 
 
-  assign D_ctrl_custom_multi = 1'b0;
+  assign D_ctrl_custom_multi = D_op_controllerlcd_0;
   assign R_ctrl_custom_multi_nxt = D_ctrl_custom_multi;
   always @(posedge clk or negedge reset_n)
     begin

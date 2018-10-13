@@ -18,6 +18,11 @@ push_buttons_external_connection_export[3] => push_buttons_external_connection_e
 
 
 |Main|ControllerLCD:controllerlcd_0
+clk => ~NO_FANOUT~
+clk_en => ~NO_FANOUT~
+reset => ~NO_FANOUT~
+start => ~NO_FANOUT~
+done <= <GND>
 dataa[0] => ~NO_FANOUT~
 dataa[1] => ~NO_FANOUT~
 dataa[2] => ~NO_FANOUT~
@@ -1915,6 +1920,9 @@ debug_mem_slave_writedata[28] => debug_mem_slave_writedata[28].IN1
 debug_mem_slave_writedata[29] => debug_mem_slave_writedata[29].IN1
 debug_mem_slave_writedata[30] => debug_mem_slave_writedata[30].IN1
 debug_mem_slave_writedata[31] => debug_mem_slave_writedata[31].IN1
+E_ci_multi_done => E_ci_multi_done.IN1
+E_ci_multi_clk_en <= Main_nios2_processor_cpu:cpu.E_ci_multi_clk_en
+E_ci_multi_start <= Main_nios2_processor_cpu:cpu.E_ci_multi_start
 E_ci_result[0] => E_ci_result[0].IN1
 E_ci_result[1] => E_ci_result[1].IN1
 E_ci_result[2] => E_ci_result[2].IN1
@@ -2076,6 +2084,8 @@ W_ci_ipending[31] <= Main_nios2_processor_cpu:cpu.W_ci_ipending
 
 
 |Main|Main_nios2_processor:nios2_processor|Main_nios2_processor_cpu:cpu
+E_ci_multi_done => E_ci_multi_clk_en.DATAB
+E_ci_multi_done => E_ci_multi_stall.IN1
 E_ci_result[0] => E_alu_result.DATAB
 E_ci_result[1] => E_alu_result.DATAB
 E_ci_result[2] => E_alu_result.DATAB
@@ -2347,9 +2357,11 @@ E_ci_datab[28] <= E_src2[28].DB_MAX_OUTPUT_PORT_TYPE
 E_ci_datab[29] <= E_src2[29].DB_MAX_OUTPUT_PORT_TYPE
 E_ci_datab[30] <= E_src2[30].DB_MAX_OUTPUT_PORT_TYPE
 E_ci_datab[31] <= E_src2[31].DB_MAX_OUTPUT_PORT_TYPE
+E_ci_multi_clk_en <= E_ci_multi_clk_en~reg0.DB_MAX_OUTPUT_PORT_TYPE
 E_ci_multi_clock <= clk.DB_MAX_OUTPUT_PORT_TYPE
 E_ci_multi_reset <= reset_n.DB_MAX_OUTPUT_PORT_TYPE
 E_ci_multi_reset_req <= reset_req.DB_MAX_OUTPUT_PORT_TYPE
+E_ci_multi_start <= E_ci_multi_start~reg0.DB_MAX_OUTPUT_PORT_TYPE
 W_ci_estatus <= W_estatus_reg.DB_MAX_OUTPUT_PORT_TYPE
 W_ci_ipending[0] <= W_ipending_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 W_ci_ipending[1] <= W_ipending_reg[1].DB_MAX_OUTPUT_PORT_TYPE
@@ -9042,7 +9054,7 @@ multi_ci_master_c[3] <= ci_slave_c[3].DB_MAX_OUTPUT_PORT_TYPE
 multi_ci_master_c[4] <= ci_slave_c[4].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Main|Main_nios2_processor_custom_instruction_master_comb_xconnect:nios2_processor_custom_instruction_master_comb_xconnect
+|Main|Main_nios2_processor_custom_instruction_master_multi_xconnect:nios2_processor_custom_instruction_master_multi_xconnect
 ci_master0_dataa[0] <= ci_slave_dataa[0].DB_MAX_OUTPUT_PORT_TYPE
 ci_master0_dataa[1] <= ci_slave_dataa[1].DB_MAX_OUTPUT_PORT_TYPE
 ci_master0_dataa[2] <= ci_slave_dataa[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -9198,6 +9210,18 @@ ci_master0_ipending[29] <= ci_slave_ipending[29].DB_MAX_OUTPUT_PORT_TYPE
 ci_master0_ipending[30] <= ci_slave_ipending[30].DB_MAX_OUTPUT_PORT_TYPE
 ci_master0_ipending[31] <= ci_slave_ipending[31].DB_MAX_OUTPUT_PORT_TYPE
 ci_master0_estatus <= ci_slave_estatus.DB_MAX_OUTPUT_PORT_TYPE
+ci_master0_clk <= ci_slave_clk.DB_MAX_OUTPUT_PORT_TYPE
+ci_master0_clken <= ci_slave_clken.DB_MAX_OUTPUT_PORT_TYPE
+ci_master0_reset <= ci_slave_reset.DB_MAX_OUTPUT_PORT_TYPE
+ci_master0_reset_req <= ci_slave_reset_req.DB_MAX_OUTPUT_PORT_TYPE
+ci_master0_start <= ci_master0_start.DB_MAX_OUTPUT_PORT_TYPE
+ci_master0_done => ci_slave_done.IN1
+ci_slave_clk => ci_master0_clk.DATAIN
+ci_slave_clken => ci_master0_clken.DATAIN
+ci_slave_reset => ci_master0_reset.DATAIN
+ci_slave_reset_req => ci_master0_reset_req.DATAIN
+ci_slave_start => ci_master0_start.IN1
+ci_slave_done <= ci_slave_done.DB_MAX_OUTPUT_PORT_TYPE
 ci_slave_dataa[0] => ci_master0_dataa[0].DATAIN
 ci_slave_dataa[1] => ci_master0_dataa[1].DATAIN
 ci_slave_dataa[2] => ci_master0_dataa[2].DATAIN
@@ -9371,7 +9395,7 @@ ci_slave_ipending[31] => ci_master0_ipending[31].DATAIN
 ci_slave_estatus => ci_master0_estatus.DATAIN
 
 
-|Main|altera_customins_slave_translator:nios2_processor_custom_instruction_master_comb_slave_translator0
+|Main|altera_customins_slave_translator:nios2_processor_custom_instruction_master_multi_slave_translator0
 ci_slave_dataa[0] => ci_master_dataa[0].DATAIN
 ci_slave_dataa[1] => ci_master_dataa[1].DATAIN
 ci_slave_dataa[2] => ci_master_dataa[2].DATAIN
@@ -9527,22 +9551,12 @@ ci_slave_ipending[29] => ci_master_ipending[29].DATAIN
 ci_slave_ipending[30] => ci_master_ipending[30].DATAIN
 ci_slave_ipending[31] => ci_master_ipending[31].DATAIN
 ci_slave_estatus => ci_master_estatus.DATAIN
-ci_slave_clk => count[0].CLK
-ci_slave_clk => count[-1].CLK
-ci_slave_clk => running.CLK
 ci_slave_clk => ci_master_clk.DATAIN
 ci_slave_clken => ci_master_clken.DATAIN
-ci_slave_clken => count[0].ENA
-ci_slave_clken => running.ENA
-ci_slave_clken => count[-1].ENA
-ci_slave_reset => count[0].ACLR
-ci_slave_reset => count[-1].PRESET
-ci_slave_reset => running.ACLR
 ci_slave_reset => ci_master_reset.DATAIN
 ci_slave_reset_req => ci_master_reset_req.DATAIN
-ci_slave_start => running.OUTPUTSELECT
 ci_slave_start => ci_master_start.DATAIN
-ci_slave_done <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+ci_slave_done <= ci_master_done.DB_MAX_OUTPUT_PORT_TYPE
 ci_master_dataa[0] <= ci_slave_dataa[0].DB_MAX_OUTPUT_PORT_TYPE
 ci_master_dataa[1] <= ci_slave_dataa[1].DB_MAX_OUTPUT_PORT_TYPE
 ci_master_dataa[2] <= ci_slave_dataa[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -9703,7 +9717,7 @@ ci_master_clken <= ci_slave_clken.DB_MAX_OUTPUT_PORT_TYPE
 ci_master_reset <= ci_slave_reset.DB_MAX_OUTPUT_PORT_TYPE
 ci_master_reset_req <= ci_slave_reset_req.DB_MAX_OUTPUT_PORT_TYPE
 ci_master_start <= ci_slave_start.DB_MAX_OUTPUT_PORT_TYPE
-ci_master_done => ~NO_FANOUT~
+ci_master_done => ci_slave_done.DATAIN
 
 
 |Main|Main_mm_interconnect_0:mm_interconnect_0

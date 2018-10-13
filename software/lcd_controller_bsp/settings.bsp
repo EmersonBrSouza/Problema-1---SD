@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Oct 7, 2018 5:34:34 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1538944474328</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>13/10/2018 14:02:33</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1539450153173</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>D:\Downloads\Uefs\2018.2\MI-Sistemas_Digitais\Problema1\software\lcd_controller_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\Main.sopcinfo</SopcDesignFile>
