@@ -5,7 +5,7 @@
 `timescale 1 ps / 1 ps
 module Main (
 		input  wire        clk_clk,                                 //                              clk.clk
-		output wire [10:0] lcd_output_external_connection_export,   //   lcd_output_external_connection.export
+		output wire [11:0] lcd_output_external_connection_export,   //   lcd_output_external_connection.export
 		input  wire [3:0]  push_buttons_external_connection_export  // push_buttons_external_connection.export
 	);
 
@@ -108,7 +108,12 @@ module Main (
 	wire         rst_controller_reset_out_reset;                                                     // rst_controller:reset_out -> [irq_mapper:reset, lcd_output:reset_n, main_memory:reset, mm_interconnect_0:nios2_processor_reset_reset_bridge_in_reset_reset, nios2_processor:reset_n, push_buttons:reset_n, rst_translator:in_reset]
 	wire         rst_controller_reset_out_reset_req;                                                 // rst_controller:reset_req -> [main_memory:reset_req, nios2_processor:reset_req, rst_translator:reset_req_in]
 
-	ControllerLCD controllerlcd_0 (
+	ControllerLCD #(
+		.LCD_BACKLIGHT (11),
+		.LCD_EN        (10),
+		.LCD_RS        (9),
+		.LCD_RW        (8)
+	) controllerlcd_0 (
 		.dataa  (nios2_processor_custom_instruction_master_multi_slave_translator0_ci_master_dataa),  // nios_custom_instruction_slave.dataa
 		.datab  (nios2_processor_custom_instruction_master_multi_slave_translator0_ci_master_datab),  //                              .datab
 		.result (nios2_processor_custom_instruction_master_multi_slave_translator0_ci_master_result), //                              .result

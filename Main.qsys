@@ -129,7 +129,12 @@
    internal="push_buttons.external_connection"
    type="conduit"
    dir="end" />
- <module name="ControllerLCD_0" kind="ControllerLCD" version="1.0" enabled="1" />
+ <module name="ControllerLCD_0" kind="ControllerLCD" version="1.0" enabled="1">
+  <parameter name="LCD_BACKLIGHT" value="11" />
+  <parameter name="LCD_EN" value="10" />
+  <parameter name="LCD_RS" value="9" />
+  <parameter name="LCD_RW" value="8" />
+ </module>
  <module name="lcd_output" kind="altera_avalon_pio" version="18.1" enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
@@ -142,7 +147,7 @@
   <parameter name="resetValue" value="0" />
   <parameter name="simDoTestBenchWiring" value="false" />
   <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="11" />
+  <parameter name="width" value="12" />
  </module>
  <module name="main_clock" kind="clock_source" version="18.1" enabled="1">
   <parameter name="clockFrequency" value="50000000" />

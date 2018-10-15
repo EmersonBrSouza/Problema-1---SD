@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <preferences>
  <debug showDebugMenu="0" />
- <systemtable>
+ <systemtable filter="Main.clk" showClockDomains="1" showResetDomains="0">
   <columns>
    <connections preferredWidth="143" />
    <irq preferredWidth="34" />
@@ -15,7 +15,7 @@
   </columns>
  </clocktable>
  <window width="1100" height="799" x="397" y="12" />
- <library expandedCategories="Project,Library" />
+ <library expandedCategories="Project,Library,Project/CustomLogic" />
  <generation simulation="NONE" />
  <hdlexample language="VERILOG" />
 </preferences>

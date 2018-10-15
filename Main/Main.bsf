@@ -40,8 +40,8 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 112)
 		(output)
-		(text "lcd_output_external_connection_export[10..0]" (rect 0 0 178 12)(font "Arial" (font_size 8)))
-		(text "lcd_output_external_connection_export[10..0]" (rect 4 101 268 112)(font "Arial" (font_size 8)))
+		(text "lcd_output_external_connection_export[11..0]" (rect 0 0 177 12)(font "Arial" (font_size 8)))
+		(text "lcd_output_external_connection_export[11..0]" (rect 4 101 268 112)(font "Arial" (font_size 8)))
 		(line (pt 0 112)(pt 256 112)(line_width 3))
 	)
 	(drawing

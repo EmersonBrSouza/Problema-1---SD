@@ -1,7 +1,7 @@
 	component Main is
 		port (
 			clk_clk                                 : in  std_logic                     := 'X';             -- clk
-			lcd_output_external_connection_export   : out std_logic_vector(10 downto 0);                    -- export
+			lcd_output_external_connection_export   : out std_logic_vector(11 downto 0);                    -- export
 			push_buttons_external_connection_export : in  std_logic_vector(3 downto 0)  := (others => 'X')  -- export
 		);
 	end component Main;

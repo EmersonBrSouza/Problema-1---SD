@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_processor' in SOPC Builder design 'Main'
  * SOPC Builder design path: ../../Main.sopcinfo
  *
- * Generated: Sat Oct 13 14:02:33 BRT 2018
+ * Generated: Sun Oct 14 22:58:00 BRT 2018
  */
 
 /*
@@ -198,7 +198,7 @@
 #define LCD_OUTPUT_BIT_CLEARING_EDGE_REGISTER 0
 #define LCD_OUTPUT_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define LCD_OUTPUT_CAPTURE 0
-#define LCD_OUTPUT_DATA_WIDTH 11
+#define LCD_OUTPUT_DATA_WIDTH 12
 #define LCD_OUTPUT_DO_TEST_BENCH_WIRING 0
 #define LCD_OUTPUT_DRIVEN_SIM_VALUE 0
 #define LCD_OUTPUT_EDGE_TYPE "NONE"

@@ -113,6 +113,8 @@ void clearScreen();
 #define START_4BITS_1LINE 0x20
 #define START_4BITS_2LINE 0x28
 
+#define WRITE_DATA 0x25
+
 #define MAX_OPTIONS_NUMBER 5
 
 int main()
@@ -142,6 +144,8 @@ int main()
 			exitOption(currentOption);
 			break;
 	}
+
+	sleep(20);
   }
   return 0;
 }
@@ -161,10 +165,12 @@ void initializeDisplayViaSoftware() {
 	IOWR_ALTERA_AVALON_PIO_DATA(LCD_OUTPUT_BASE, START_8BITS_1LINE);
 	sleep(200);
 	IOWR_ALTERA_AVALON_PIO_DATA(LCD_OUTPUT_BASE, CLEAR_DISPLAY);
-	sleep(500);
+	sleep(50);
 	IOWR_ALTERA_AVALON_PIO_DATA(LCD_OUTPUT_BASE, RETURN_HOME);
-	sleep(500);
+	sleep(50);
 	IOWR_ALTERA_AVALON_PIO_DATA(LCD_OUTPUT_BASE, DISPLAY_ON_CURSOR_OFF);
+	sleep(50);
+	writeWord(0);
 }
 
 int nextOption (int currentOption) {
@@ -204,7 +210,7 @@ void exitOption (int currentOption) {
 }
 
 void sleep (int milliseconds) {
-	int i = 0;
+	volatile int i = 0;
 	int cycles = milliseconds * 1000;
 	while ( i < cycles ) { i++; }
 }
@@ -215,11 +221,16 @@ void writeWord(char* word) {
 	int i = 0;
 
 	while (i < sizeof(word)){
-		// LÓGICA PARA ESCREVER NO LCD
+		ALT_CI_CONTROLLERLCD_0(WRITE_DATA, word[i]);
+		sleep(50);
+		ALT_CI_CONTROLLERLCD_0(MOVE_CURSOR_RIGHT, 0x0);
+		sleep(50);
 		i++;
 	}
 }
 
 void clearScreen() {
 	ALT_CI_CONTROLLERLCD_0(CLEAR_DISPLAY,0);
+	sleep(50);
+	ALT_CI_CONTROLLERLCD_0(RETURN_HOME,0);
 }

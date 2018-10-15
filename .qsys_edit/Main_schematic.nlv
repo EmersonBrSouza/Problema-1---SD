@@ -1,19 +1,21 @@
 # # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
 # 
-preplace inst Main.nios2_processor -pg 1 -lvl 1 -y 70
+preplace inst Main.nios2_processor -pg 1 -lvl 1 -y 50
 preplace inst Main.nios2_processor.reset_bridge -pg 1
 preplace inst Main.nios2_processor.cpu -pg 1
-preplace inst Main.main_memory -pg 1 -lvl 3 -y 260
-preplace inst Main.push_buttons -pg 1 -lvl 3 -y 340
+preplace inst Main.main_memory -pg 1 -lvl 3 -y 240
+preplace inst Main.push_buttons -pg 1 -lvl 3 -y 320
 preplace inst Main -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst Main.ControllerLCD_0 -pg 1 -lvl 2 -y 50
 preplace inst Main.nios2_processor.clock_bridge -pg 1
-preplace inst Main.main_clock -pg 1 -lvl 2 -y 160
-preplace inst Main.lcd_output -pg 1 -lvl 3 -y 160
-preplace netloc INTERCONNECT<net_container>Main</net_container>(SLAVE)lcd_output.reset,(SLAVE)push_buttons.reset,(SLAVE)main_memory.reset1,(MASTER)nios2_processor.debug_reset_request,(SLAVE)nios2_processor.reset,(SLAVE)main_clock.clk_in_reset,(MASTER)main_clock.clk_reset) 1 0 3 250 230 630 250 850
+preplace inst Main.main_clock -pg 1 -lvl 2 -y 140
+preplace inst Main.lcd_output -pg 1 -lvl 3 -y 140
+preplace netloc EXPORT<net_container>Main</net_container>(SLAVE)push_buttons.external_connection,(SLAVE)Main.push_buttons_external_connection) 1 0 3 NJ 350 NJ 350 NJ
 preplace netloc EXPORT<net_container>Main</net_container>(SLAVE)Main.lcd_output_external_connection,(SLAVE)lcd_output.external_connection) 1 0 3 NJ 270 NJ 270 NJ
-preplace netloc INTERCONNECT<net_container>Main</net_container>(MASTER)nios2_processor.instruction_master,(SLAVE)lcd_output.s1,(SLAVE)nios2_processor.debug_mem_slave,(SLAVE)push_buttons.s1,(MASTER)nios2_processor.data_master,(SLAVE)main_memory.s1) 1 0 3 230 210 650 230 870
-preplace netloc EXPORT<net_container>Main</net_container>(SLAVE)Main.clk,(SLAVE)main_clock.clk_in) 1 0 2 NJ 250 NJ
-preplace netloc FAN_OUT<net_container>Main</net_container>(SLAVE)push_buttons.clk,(SLAVE)nios2_processor.clk,(MASTER)main_clock.clk,(SLAVE)main_memory.clk1,(SLAVE)lcd_output.clk) 1 0 3 230 30 NJ 30 910
-preplace netloc EXPORT<net_container>Main</net_container>(SLAVE)Main.push_buttons_external_connection,(SLAVE)push_buttons.external_connection) 1 0 3 NJ 370 NJ 370 NJ
-levelinfo -pg 1 0 200 1130
-levelinfo -hier Main 210 370 680 970 1120
+preplace netloc EXPORT<net_container>Main</net_container>(SLAVE)Main.clk,(SLAVE)main_clock.clk_in) 1 0 2 NJ 210 NJ
+preplace netloc INTERCONNECT<net_container>Main</net_container>(SLAVE)nios2_processor.debug_mem_slave,(MASTER)nios2_processor.instruction_master,(MASTER)nios2_processor.data_master,(SLAVE)push_buttons.s1,(SLAVE)main_memory.s1,(SLAVE)lcd_output.s1) 1 0 3 250 190 650 310 990
+preplace netloc POINT_TO_POINT<net_container>Main</net_container>(MASTER)nios2_processor.custom_instruction_master,(SLAVE)ControllerLCD_0.nios_custom_instruction_slave) 1 1 1 670
+preplace netloc INTERCONNECT<net_container>Main</net_container>(SLAVE)push_buttons.reset,(SLAVE)lcd_output.reset,(SLAVE)main_memory.reset1,(SLAVE)nios2_processor.reset,(MASTER)main_clock.clk_reset,(SLAVE)main_clock.clk_in_reset,(MASTER)nios2_processor.debug_reset_request) 1 0 3 270 230 630 290 930
+preplace netloc FAN_OUT<net_container>Main</net_container>(SLAVE)nios2_processor.clk,(MASTER)main_clock.clk,(SLAVE)main_memory.clk1,(SLAVE)lcd_output.clk,(SLAVE)push_buttons.clk) 1 0 3 230 250 NJ 250 970
+levelinfo -pg 1 0 200 1180
+levelinfo -hier Main 210 390 720 1020 1170
