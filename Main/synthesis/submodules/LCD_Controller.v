@@ -6,7 +6,8 @@ module ControllerLCD(
 	done,
 	dataa,
 	datab,
-	result
+	result,
+	command
 );
 
 
@@ -18,6 +19,7 @@ module ControllerLCD(
 	input [31:0]datab;
 	
 	output reg [31:0] result;
+	output reg [11:0] command;
 	output done;
 	
 	parameter LCD_BACKLIGHT = 11; // 0 - off, 1 - on
@@ -35,6 +37,7 @@ module ControllerLCD(
 						result[LCD_RS] <= 1'b1;
 						result[LCD_EN] <= 1'b1;
 						result[LCD_BACKLIGHT] <= 1'b1;
+						command = result;
 					end	
 				8'h02 : // Return home
 					begin
@@ -43,6 +46,7 @@ module ControllerLCD(
 						result[LCD_RS] <= 1'b0;
 						result[LCD_EN] <= 1'b1;
 						result[LCD_BACKLIGHT] <= 1'b1;
+						command = result;
 					end
 				8'h08 : // Display Off
 					begin
@@ -51,6 +55,7 @@ module ControllerLCD(
 						result[LCD_RS] <= 1'b0;
 						result[LCD_EN] <= 1'b1;
 						result[LCD_BACKLIGHT] <= 1'b1;
+						command = result;
 					end
 				8'h10 : // Move Cursor Left
 					begin
@@ -59,6 +64,7 @@ module ControllerLCD(
 						result[LCD_RS] <= 1'b0;
 						result[LCD_EN] <= 1'b1;
 						result[LCD_BACKLIGHT] <= 1'b1;
+						command = result;
 					end
 				8'h14 : // Move Cursor Right
 					begin
@@ -67,6 +73,7 @@ module ControllerLCD(
 						result[LCD_RS] <= 1'b0;
 						result[LCD_EN] <= 1'b1;
 						result[LCD_BACKLIGHT] <= 1'b1;
+						command = result;
 					end
 				8'h0E : // Display On, Cursor On
 					begin
@@ -75,6 +82,7 @@ module ControllerLCD(
 						result[LCD_RS] <= 1'b0;
 						result[LCD_EN] <= 1'b1;
 						result[LCD_BACKLIGHT] <= 1'b1;
+						command = result;
 					end
 				8'h0C : // Display On, Cursor Off
 					begin
@@ -83,6 +91,7 @@ module ControllerLCD(
 						result[LCD_RS] <= 1'b0;
 						result[LCD_EN] <= 1'b1;
 						result[LCD_BACKLIGHT] <= 1'b1;
+						command = result;
 					end
 				8'h20 : // Start 4 bits with 1 line
 					begin
@@ -91,6 +100,7 @@ module ControllerLCD(
 						result[LCD_RS] <= 1'b0;
 						result[LCD_EN] <= 1'b1;
 						result[LCD_BACKLIGHT] <= 1'b1;
+						command = result;
 					end 
 				8'h25: // Write a letter
 					begin
@@ -99,6 +109,7 @@ module ControllerLCD(
 						result[LCD_RS] <= 1'b1;
 						result[LCD_EN] <= 1'b1;
 						result[LCD_BACKLIGHT] <= 1'b1;
+						command = result;
 					end
 				8'h28 : // Start 4 bits with 2 lines
 					begin
@@ -107,6 +118,7 @@ module ControllerLCD(
 						result[LCD_RS] <= 1'b0;
 						result[LCD_EN] <= 1'b1;
 						result[LCD_BACKLIGHT] <= 1'b1;
+						command = result;
 					end
 				8'h30 : // Start 8 bits with 1 line 
 					begin
@@ -115,6 +127,7 @@ module ControllerLCD(
 						result[LCD_RS] <= 1'b0;
 						result[LCD_EN] <= 1'b1;
 						result[LCD_BACKLIGHT] <= 1'b1;
+						command = result;
 					end
 				8'h38 : // Start 8 bits with 2 lines 
 					begin
@@ -123,6 +136,7 @@ module ControllerLCD(
 						result[LCD_RS] <= 1'b0;
 						result[LCD_EN] <= 1'b1;
 						result[LCD_BACKLIGHT] <= 1'b1;
+						command = result;
 					end			
 				default :
 					begin
@@ -130,15 +144,8 @@ module ControllerLCD(
 						result[LCD_RS] <= 1'b0;
 						result[LCD_EN] <= 1'b0;
 						result[LCD_BACKLIGHT] <= 1'b1;
+						command = result;
 					end
 			endcase
-		end
-		
-	
-	
-	Main u0 (
-	  .clk_clk                                 (clk),
-	  .lcd_output_external_connection_export   (result[11:0])
-	);
-	
+		end	
 endmodule

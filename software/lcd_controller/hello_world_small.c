@@ -80,8 +80,9 @@
 
 #include "system.h"
 #include "altera_avalon_pio_regs.h"
+#include "unistd.h"
 
-void sleep(int ms);
+// void sleep(int ms);
 
 void initializeDisplayViaHardware();
 void initializeDisplayViaSoftware();
@@ -100,18 +101,40 @@ void clearScreen();
 #define FALSE 0
 
 #define CLEAR_DISPLAY 0x01
+#define CLEAR_DISPLAY_B 0b110000000001
+
 #define RETURN_HOME 0x02
+#define RETURN_HOME_B 0b110000000010
+
 #define MOVE_CURSOR_LEFT 0x10
+#define MOVE_CURSOR_LEFT_B 0b110000001010
+
 #define MOVE_CURSOR_RIGHT 0x14
+#define MOVE_CURSOR_RIGHT_B 0b110000001110
 
 #define DISPLAY_OFF 0x08
+#define DISPLAY_OFF_B 0b010000001000
+
 #define DISPLAY_ON_CURSOR_ON 0x0E
+#define DISPLAY_ON_CURSOR_ON_B 0b110000001110
+
 #define DISPLAY_ON_CURSOR_OFF 0x0C
+#define DISPLAY_ON_CURSOR_OFF_B 0b110000001100
 
 #define START_8BITS_1LINE 0x30
+#define START_8BITS_1LINE_B 0b110000110000
+
 #define START_8BITS_2LINE 0x38
+#define START_8BITS_2LINE_B 0b110000111000
+
 #define START_4BITS_1LINE 0x20
+#define START_4BITS_1LINE_B 0b110000100000
+
 #define START_4BITS_2LINE 0x28
+#define START_4BITS_2LINE_B 0b110000101000
+
+#define ENTRY_MODE 0x06
+#define ENTRY_MODE_B 0b110000000110
 
 #define WRITE_DATA 0x25
 
@@ -123,7 +146,7 @@ int main()
   int currentOption = 0;
 
   initializeDisplayViaSoftware();
-  sleep(2000);
+  usleep(2000);
 
   while (TRUE) {
 	in = IORD_ALTERA_AVALON_PIO_DATA(PUSH_BUTTONS_BASE);
@@ -145,7 +168,7 @@ int main()
 			break;
 	}
 
-	sleep(20);
+	usleep(20);
   }
   return 0;
 }
@@ -153,24 +176,42 @@ int main()
 
 void initializeDisplayViaHardware () {
 	ALT_CI_CONTROLLERLCD_0(START_8BITS_1LINE,0);
-	sleep(5000);
+	usleep(5000);
 	ALT_CI_CONTROLLERLCD_0(CLEAR_DISPLAY,0);
-	sleep(5000);
+	usleep(5000);
 	ALT_CI_CONTROLLERLCD_0(RETURN_HOME,0);
-	sleep(5000);
+	usleep(5000);
 	ALT_CI_CONTROLLERLCD_0(DISPLAY_ON_CURSOR_OFF,0);
 }
 
 void initializeDisplayViaSoftware() {
-	IOWR_ALTERA_AVALON_PIO_DATA(LCD_OUTPUT_BASE, START_8BITS_1LINE);
-	sleep(200);
-	IOWR_ALTERA_AVALON_PIO_DATA(LCD_OUTPUT_BASE, CLEAR_DISPLAY);
-	sleep(50);
-	IOWR_ALTERA_AVALON_PIO_DATA(LCD_OUTPUT_BASE, RETURN_HOME);
-	sleep(50);
-	IOWR_ALTERA_AVALON_PIO_DATA(LCD_OUTPUT_BASE, DISPLAY_ON_CURSOR_OFF);
-	sleep(50);
-	writeWord(0);
+
+	 usleep(15000);
+	 ALT_CI_CONTROLLERLCD_0(START_8BITS_1LINE,0);
+	 usleep(4100);
+	 ALT_CI_CONTROLLERLCD_0(START_8BITS_1LINE,0);
+	 usleep(100);
+	 ALT_CI_CONTROLLERLCD_0(START_8BITS_1LINE,0);
+	 usleep(100);
+	 ALT_CI_CONTROLLERLCD_0(START_8BITS_1LINE,0);
+	 usleep(100);
+
+	 ALT_CI_CONTROLLERLCD_0(DISPLAY_OFF_B,0);
+	 usleep(100);
+
+	 ALT_CI_CONTROLLERLCD_0(DISPLAY_ON_CURSOR_OFF_B,0);
+	 usleep(100);
+
+	 ALT_CI_CONTROLLERLCD_0(ENTRY_MODE_B,0);
+	 usleep(100);
+
+	 ALT_CI_CONTROLLERLCD_0(RETURN_HOME_B,0);
+	 usleep(2000);
+
+	 ALT_CI_CONTROLLERLCD_0(CLEAR_DISPLAY_B,0);
+	 usleep(2000);
+
+	 // writeWord(0);
 }
 
 int nextOption (int currentOption) {
@@ -209,28 +250,28 @@ void exitOption (int currentOption) {
 	showOption(currentOption);
 }
 
-void sleep (int milliseconds) {
+/*void sleep (int milliseconds) {
 	volatile int i = 0;
 	int cycles = milliseconds * 1000;
 	while ( i < cycles ) { i++; }
-}
+}*/
 
 void writeWord(char* word) {
 	ALT_CI_CONTROLLERLCD_0(CLEAR_DISPLAY, 0x0);
-	sleep(50);
+	usleep(50);
 	int i = 0;
 
 	while (i < sizeof(word)){
 		ALT_CI_CONTROLLERLCD_0(WRITE_DATA, word[i]);
-		sleep(50);
+		usleep(50);
 		ALT_CI_CONTROLLERLCD_0(MOVE_CURSOR_RIGHT, 0x0);
-		sleep(50);
+		usleep(50);
 		i++;
 	}
 }
 
 void clearScreen() {
 	ALT_CI_CONTROLLERLCD_0(CLEAR_DISPLAY,0);
-	sleep(50);
+	usleep(50);
 	ALT_CI_CONTROLLERLCD_0(RETURN_HOME,0);
 }

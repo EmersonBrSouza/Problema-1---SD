@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios2_processor' in SOPC Builder design 'Main'
  * SOPC Builder design path: ../../Main.sopcinfo
  *
- * Generated: Sun Oct 14 22:58:00 BRT 2018
+ * Generated: Mon Oct 15 13:22:17 GMT-03:00 2018
  */
 
 /*
@@ -186,33 +186,6 @@
 #define ALT_MAX_FD 4
 #define ALT_SYS_CLK none
 #define ALT_TIMESTAMP_CLK none
-
-
-/*
- * lcd_output configuration
- *
- */
-
-#define ALT_MODULE_CLASS_lcd_output altera_avalon_pio
-#define LCD_OUTPUT_BASE 0x21030
-#define LCD_OUTPUT_BIT_CLEARING_EDGE_REGISTER 0
-#define LCD_OUTPUT_BIT_MODIFYING_OUTPUT_REGISTER 0
-#define LCD_OUTPUT_CAPTURE 0
-#define LCD_OUTPUT_DATA_WIDTH 12
-#define LCD_OUTPUT_DO_TEST_BENCH_WIRING 0
-#define LCD_OUTPUT_DRIVEN_SIM_VALUE 0
-#define LCD_OUTPUT_EDGE_TYPE "NONE"
-#define LCD_OUTPUT_FREQ 50000000
-#define LCD_OUTPUT_HAS_IN 0
-#define LCD_OUTPUT_HAS_OUT 1
-#define LCD_OUTPUT_HAS_TRI 0
-#define LCD_OUTPUT_IRQ -1
-#define LCD_OUTPUT_IRQ_INTERRUPT_CONTROLLER_ID -1
-#define LCD_OUTPUT_IRQ_TYPE "NONE"
-#define LCD_OUTPUT_NAME "/dev/lcd_output"
-#define LCD_OUTPUT_RESET_VALUE 0
-#define LCD_OUTPUT_SPAN 16
-#define LCD_OUTPUT_TYPE "altera_avalon_pio"
 
 
 /*

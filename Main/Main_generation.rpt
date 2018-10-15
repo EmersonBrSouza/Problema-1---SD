@@ -1,11 +1,9 @@
 Info: Starting: Create block symbol file (.bsf)
-Info: qsys-generate D:\Downloads\Uefs\2018.2\MI-Sistemas_Digitais\Problema1\Main.qsys --block-symbol-file --output-directory=D:\Downloads\Uefs\2018.2\MI-Sistemas_Digitais\Problema1\Main --family="Cyclone IV E" --part=EP4CE30F23C7
-Progress: Loading Problema1/Main.qsys
+Info: qsys-generate C:\Users\EmersonSouza\Desktop\Problema-1---SD\Main.qsys --block-symbol-file --output-directory=C:\Users\EmersonSouza\Desktop\Problema-1---SD\Main --family="Cyclone IV E" --part=EP4CE30F23C7
+Progress: Loading Problema-1---SD/Main.qsys
 Progress: Reading input file
 Progress: Adding ControllerLCD_0 [ControllerLCD 1.0]
 Progress: Parameterizing module ControllerLCD_0
-Progress: Adding lcd_output [altera_avalon_pio 18.1]
-Progress: Parameterizing module lcd_output
 Progress: Adding main_clock [clock_source 18.1]
 Progress: Parameterizing module main_clock
 Progress: Adding main_memory [altera_avalon_onchip_memory2 18.1]
@@ -22,13 +20,11 @@ Info: qsys-generate succeeded.
 Info: Finished: Create block symbol file (.bsf)
 Info: 
 Info: Starting: Create HDL design files for synthesis
-Info: qsys-generate D:\Downloads\Uefs\2018.2\MI-Sistemas_Digitais\Problema1\Main.qsys --synthesis=VERILOG --output-directory=D:\Downloads\Uefs\2018.2\MI-Sistemas_Digitais\Problema1\Main\synthesis --family="Cyclone IV E" --part=EP4CE30F23C7
-Progress: Loading Problema1/Main.qsys
+Info: qsys-generate C:\Users\EmersonSouza\Desktop\Problema-1---SD\Main.qsys --synthesis=VERILOG --output-directory=C:\Users\EmersonSouza\Desktop\Problema-1---SD\Main\synthesis --family="Cyclone IV E" --part=EP4CE30F23C7
+Progress: Loading Problema-1---SD/Main.qsys
 Progress: Reading input file
 Progress: Adding ControllerLCD_0 [ControllerLCD 1.0]
 Progress: Parameterizing module ControllerLCD_0
-Progress: Adding lcd_output [altera_avalon_pio 18.1]
-Progress: Parameterizing module lcd_output
 Progress: Adding main_clock [clock_source 18.1]
 Progress: Parameterizing module main_clock
 Progress: Adding main_memory [altera_avalon_onchip_memory2 18.1]
@@ -45,17 +41,13 @@ Info: Main: Generating Main "Main" for QUARTUS_SYNTH
 Warning: Main: "No matching role found for nios2_processor_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_ipending (ipending)"
 Warning: Main: "No matching role found for nios2_processor_custom_instruction_master_multi_xconnect:ci_slave:ci_slave_estatus (estatus)"
 Info: ControllerLCD_0: "Main" instantiated ControllerLCD "ControllerLCD_0"
-Info: lcd_output: Starting RTL generation for module 'Main_lcd_output'
-Info: lcd_output:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Main_lcd_output --dir=C:/Users/T-Gamer/AppData/Local/Temp/alt7819_2281110272524759681.dir/0007_lcd_output_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/T-Gamer/AppData/Local/Temp/alt7819_2281110272524759681.dir/0007_lcd_output_gen//Main_lcd_output_component_configuration.pl  --do_build_sim=0  ]
-Info: lcd_output: Done RTL generation for module 'Main_lcd_output'
-Info: lcd_output: "Main" instantiated altera_avalon_pio "lcd_output"
 Info: main_memory: Starting RTL generation for module 'Main_main_memory'
-Info: main_memory:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=Main_main_memory --dir=C:/Users/T-Gamer/AppData/Local/Temp/alt7819_2281110272524759681.dir/0008_main_memory_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/T-Gamer/AppData/Local/Temp/alt7819_2281110272524759681.dir/0008_main_memory_gen//Main_main_memory_component_configuration.pl  --do_build_sim=0  ]
+Info: main_memory:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=Main_main_memory --dir=C:/Users/EMERSO~1/AppData/Local/Temp/alt7819_7056337808383762812.dir/0006_main_memory_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/EMERSO~1/AppData/Local/Temp/alt7819_7056337808383762812.dir/0006_main_memory_gen//Main_main_memory_component_configuration.pl  --do_build_sim=0  ]
 Info: main_memory: Done RTL generation for module 'Main_main_memory'
 Info: main_memory: "Main" instantiated altera_avalon_onchip_memory2 "main_memory"
 Info: nios2_processor: "Main" instantiated altera_nios2_gen2 "nios2_processor"
 Info: push_buttons: Starting RTL generation for module 'Main_push_buttons'
-Info: push_buttons:   Generation command is [exec D:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I D:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- D:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Main_push_buttons --dir=C:/Users/T-Gamer/AppData/Local/Temp/alt7819_2281110272524759681.dir/0009_push_buttons_gen/ --quartus_dir=D:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/T-Gamer/AppData/Local/Temp/alt7819_2281110272524759681.dir/0009_push_buttons_gen//Main_push_buttons_component_configuration.pl  --do_build_sim=0  ]
+Info: push_buttons:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=Main_push_buttons --dir=C:/Users/EMERSO~1/AppData/Local/Temp/alt7819_7056337808383762812.dir/0007_push_buttons_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/EMERSO~1/AppData/Local/Temp/alt7819_7056337808383762812.dir/0007_push_buttons_gen//Main_push_buttons_component_configuration.pl  --do_build_sim=0  ]
 Info: push_buttons: Done RTL generation for module 'Main_push_buttons'
 Info: push_buttons: "Main" instantiated altera_avalon_pio "push_buttons"
 Info: nios2_processor_custom_instruction_master_translator: "Main" instantiated altera_customins_master_translator "nios2_processor_custom_instruction_master_translator"
@@ -64,24 +56,23 @@ Info: nios2_processor_custom_instruction_master_multi_slave_translator0: "Main" 
 Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
 Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
-Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
 Info: mm_interconnect_0: "Main" instantiated altera_mm_interconnect "mm_interconnect_0"
 Info: irq_mapper: "Main" instantiated altera_irq_mapper "irq_mapper"
 Info: rst_controller: "Main" instantiated altera_reset_controller "rst_controller"
 Info: cpu: Starting RTL generation for module 'Main_nios2_processor_cpu'
-Info: cpu:   Generation command is [exec D:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I D:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I D:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I D:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I D:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I D:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I D:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- D:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=Main_nios2_processor_cpu --dir=C:/Users/T-Gamer/AppData/Local/Temp/alt7819_2281110272524759681.dir/0015_cpu_gen/ --quartus_bindir=D:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/T-Gamer/AppData/Local/Temp/alt7819_2281110272524759681.dir/0015_cpu_gen//Main_nios2_processor_cpu_processor_configuration.pl  --do_build_sim=0  ]
-Info: cpu: # 2018.10.14 23:27:58 (*) Starting Nios II generation
-Info: cpu: # 2018.10.14 23:27:58 (*)   Checking for plaintext license.
-Info: cpu: # 2018.10.14 23:27:59 (*)   Couldn't query license setup in Quartus directory D:/intelFPGA_lite/18.1/quartus/bin64/
-Info: cpu: # 2018.10.14 23:27:59 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
-Info: cpu: # 2018.10.14 23:27:59 (*)   LM_LICENSE_FILE environment variable is empty
-Info: cpu: # 2018.10.14 23:27:59 (*)   Plaintext license not found.
-Info: cpu: # 2018.10.14 23:27:59 (*)   No license required to generate encrypted Nios II/e.
-Info: cpu: # 2018.10.14 23:27:59 (*)   Elaborating CPU configuration settings
-Info: cpu: # 2018.10.14 23:27:59 (*)   Creating all objects for CPU
-Info: cpu: # 2018.10.14 23:28:00 (*)   Generating RTL from CPU objects
-Info: cpu: # 2018.10.14 23:28:00 (*)   Creating plain-text RTL
-Info: cpu: # 2018.10.14 23:28:00 (*) Done Nios II generation
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=Main_nios2_processor_cpu --dir=C:/Users/EMERSO~1/AppData/Local/Temp/alt7819_7056337808383762812.dir/0013_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/EMERSO~1/AppData/Local/Temp/alt7819_7056337808383762812.dir/0013_cpu_gen//Main_nios2_processor_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2018.10.15 12:52:21 (*) Starting Nios II generation
+Info: cpu: # 2018.10.15 12:52:21 (*)   Checking for plaintext license.
+Info: cpu: # 2018.10.15 12:52:25 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
+Info: cpu: # 2018.10.15 12:52:25 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2018.10.15 12:52:25 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2018.10.15 12:52:25 (*)   Plaintext license not found.
+Info: cpu: # 2018.10.15 12:52:25 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2018.10.15 12:52:25 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2018.10.15 12:52:25 (*)   Creating all objects for CPU
+Info: cpu: # 2018.10.15 12:52:32 (*)   Generating RTL from CPU objects
+Info: cpu: # 2018.10.15 12:52:32 (*)   Creating plain-text RTL
+Info: cpu: # 2018.10.15 12:52:36 (*) Done Nios II generation
 Info: cpu: Done RTL generation for module 'Main_nios2_processor_cpu'
 Info: cpu: "nios2_processor" instantiated altera_nios2_gen2_unit "cpu"
 Info: nios2_processor_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_processor_data_master_translator"
@@ -95,9 +86,9 @@ Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "c
 Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
 Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
 Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
-Info: Reusing file D:/Downloads/Uefs/2018.2/MI-Sistemas_Digitais/Problema1/Main/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: Reusing file C:/Users/EmersonSouza/Desktop/Problema-1---SD/Main/synthesis/submodules/altera_merlin_arbitrator.sv
 Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
 Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
-Info: Main: Done "Main" with 26 modules, 40 files
+Info: Main: Done "Main" with 25 modules, 39 files
 Info: qsys-generate succeeded.
 Info: Finished: Create HDL design files for synthesis

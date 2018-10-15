@@ -1,18 +1,9 @@
-23:12:22 **** Incremental Build of configuration Nios II for project lcd_controller ****
+11:24:41 **** Incremental Build of configuration Nios II for project lcd_controller ****
 make all 
 Info: Building ../lcd_controller_bsp/
-D:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lcd_controller_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../lcd_controller_bsp/
 [BSP build complete]
-Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
-nios2-elf-gcc -xc -MP -MMD -c -I../lcd_controller_bsp//HAL/inc -I../lcd_controller_bsp/ -I../lcd_controller_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world_small.o hello_world_small.c
-Info: Linking lcd_controller.elf
-nios2-elf-g++  -T'../lcd_controller_bsp//linker.x' -msys-crt0='../lcd_controller_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../lcd_controller_bsp/  -msmallc  -Wl,-Map=lcd_controller.map   -Os -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o lcd_controller.elf obj/default/hello_world_small.o -lm -msys-lib=m
-nios2-elf-insert lcd_controller.elf --thread_model hal --cpu_name nios2_processor --qsys true --simulation_enabled false --stderr_dev none --stdin_dev none --stdout_dev none --sopc_system_name Main --quartus_project_dir "D:/Downloads/Uefs/2018.2/MI-Sistemas_Digitais/Problema1" --jdi ../..//output_files/LCD_Controller.jdi --sopcinfo D:/Downloads/Uefs/2018.2/MI-Sistemas_Digitais/Problema1/software/lcd_controller_bsp/../../Main.sopcinfo
-Info: (lcd_controller.elf) 1396 Bytes program size (code + initialized data).
-Info:                      37 KBytes free for stack + heap.
-Info: Creating lcd_controller.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source lcd_controller.elf >lcd_controller.objdump
 [lcd_controller build complete]
 
-23:12:24 Build Finished (took 1s.580ms)
+11:24:44 Build Finished (took 3s.56ms)
 

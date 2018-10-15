@@ -2,9 +2,9 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>14/10/2018 22:57:57</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1539568677794</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>D:\Downloads\Uefs\2018.2\MI-Sistemas_Digitais\Problema1\software\lcd_controller_bsp</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>15/10/2018 13:22:11</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1539620531931</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>C:\Users\EmersonSouza\Desktop\Problema-1---SD\software\lcd_controller_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\Main.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
@@ -883,12 +883,6 @@
         <MemoryMap>
                 <slaveDescriptor>push_buttons</slaveDescriptor>
                 <addressRange>0x00021020 - 0x0002102F</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>lcd_output</slaveDescriptor>
-                <addressRange>0x00021030 - 0x0002103F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>

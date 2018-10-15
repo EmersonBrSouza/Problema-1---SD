@@ -5,7 +5,7 @@
 `timescale 1 ps / 1 ps
 module Main (
 		input  wire        clk_clk,                                 //                              clk.clk
-		output wire [11:0] lcd_output_external_connection_export,   //   lcd_output_external_connection.export
+		output wire [11:0] controllerlcd_0_conduit_end_readdata,    //      controllerlcd_0_conduit_end.readdata
 		input  wire [3:0]  push_buttons_external_connection_export  // push_buttons_external_connection.export
 	);
 
@@ -90,11 +90,6 @@ module Main (
 	wire   [3:0] mm_interconnect_0_nios2_processor_debug_mem_slave_byteenable;                       // mm_interconnect_0:nios2_processor_debug_mem_slave_byteenable -> nios2_processor:debug_mem_slave_byteenable
 	wire         mm_interconnect_0_nios2_processor_debug_mem_slave_write;                            // mm_interconnect_0:nios2_processor_debug_mem_slave_write -> nios2_processor:debug_mem_slave_write
 	wire  [31:0] mm_interconnect_0_nios2_processor_debug_mem_slave_writedata;                        // mm_interconnect_0:nios2_processor_debug_mem_slave_writedata -> nios2_processor:debug_mem_slave_writedata
-	wire         mm_interconnect_0_lcd_output_s1_chipselect;                                         // mm_interconnect_0:lcd_output_s1_chipselect -> lcd_output:chipselect
-	wire  [31:0] mm_interconnect_0_lcd_output_s1_readdata;                                           // lcd_output:readdata -> mm_interconnect_0:lcd_output_s1_readdata
-	wire   [1:0] mm_interconnect_0_lcd_output_s1_address;                                            // mm_interconnect_0:lcd_output_s1_address -> lcd_output:address
-	wire         mm_interconnect_0_lcd_output_s1_write;                                              // mm_interconnect_0:lcd_output_s1_write -> lcd_output:write_n
-	wire  [31:0] mm_interconnect_0_lcd_output_s1_writedata;                                          // mm_interconnect_0:lcd_output_s1_writedata -> lcd_output:writedata
 	wire         mm_interconnect_0_main_memory_s1_chipselect;                                        // mm_interconnect_0:main_memory_s1_chipselect -> main_memory:chipselect
 	wire  [31:0] mm_interconnect_0_main_memory_s1_readdata;                                          // main_memory:readdata -> mm_interconnect_0:main_memory_s1_readdata
 	wire  [13:0] mm_interconnect_0_main_memory_s1_address;                                           // mm_interconnect_0:main_memory_s1_address -> main_memory:address
@@ -105,7 +100,7 @@ module Main (
 	wire  [31:0] mm_interconnect_0_push_buttons_s1_readdata;                                         // push_buttons:readdata -> mm_interconnect_0:push_buttons_s1_readdata
 	wire   [1:0] mm_interconnect_0_push_buttons_s1_address;                                          // mm_interconnect_0:push_buttons_s1_address -> push_buttons:address
 	wire  [31:0] nios2_processor_irq_irq;                                                            // irq_mapper:sender_irq -> nios2_processor:irq
-	wire         rst_controller_reset_out_reset;                                                     // rst_controller:reset_out -> [irq_mapper:reset, lcd_output:reset_n, main_memory:reset, mm_interconnect_0:nios2_processor_reset_reset_bridge_in_reset_reset, nios2_processor:reset_n, push_buttons:reset_n, rst_translator:in_reset]
+	wire         rst_controller_reset_out_reset;                                                     // rst_controller:reset_out -> [irq_mapper:reset, main_memory:reset, mm_interconnect_0:nios2_processor_reset_reset_bridge_in_reset_reset, nios2_processor:reset_n, push_buttons:reset_n, rst_translator:in_reset]
 	wire         rst_controller_reset_out_reset_req;                                                 // rst_controller:reset_req -> [main_memory:reset_req, nios2_processor:reset_req, rst_translator:reset_req_in]
 
 	ControllerLCD #(
@@ -114,25 +109,15 @@ module Main (
 		.LCD_RS        (9),
 		.LCD_RW        (8)
 	) controllerlcd_0 (
-		.dataa  (nios2_processor_custom_instruction_master_multi_slave_translator0_ci_master_dataa),  // nios_custom_instruction_slave.dataa
-		.datab  (nios2_processor_custom_instruction_master_multi_slave_translator0_ci_master_datab),  //                              .datab
-		.result (nios2_processor_custom_instruction_master_multi_slave_translator0_ci_master_result), //                              .result
-		.clk_en (nios2_processor_custom_instruction_master_multi_slave_translator0_ci_master_clk_en), //                              .clk_en
-		.done   (nios2_processor_custom_instruction_master_multi_slave_translator0_ci_master_done),   //                              .done
-		.reset  (nios2_processor_custom_instruction_master_multi_slave_translator0_ci_master_reset),  //                              .reset
-		.start  (nios2_processor_custom_instruction_master_multi_slave_translator0_ci_master_start),  //                              .start
-		.clk    (nios2_processor_custom_instruction_master_multi_slave_translator0_ci_master_clk)     //                              .clk
-	);
-
-	Main_lcd_output lcd_output (
-		.clk        (clk_clk),                                    //                 clk.clk
-		.reset_n    (~rst_controller_reset_out_reset),            //               reset.reset_n
-		.address    (mm_interconnect_0_lcd_output_s1_address),    //                  s1.address
-		.write_n    (~mm_interconnect_0_lcd_output_s1_write),     //                    .write_n
-		.writedata  (mm_interconnect_0_lcd_output_s1_writedata),  //                    .writedata
-		.chipselect (mm_interconnect_0_lcd_output_s1_chipselect), //                    .chipselect
-		.readdata   (mm_interconnect_0_lcd_output_s1_readdata),   //                    .readdata
-		.out_port   (lcd_output_external_connection_export)       // external_connection.export
+		.dataa   (nios2_processor_custom_instruction_master_multi_slave_translator0_ci_master_dataa),  // nios_custom_instruction_slave.dataa
+		.datab   (nios2_processor_custom_instruction_master_multi_slave_translator0_ci_master_datab),  //                              .datab
+		.result  (nios2_processor_custom_instruction_master_multi_slave_translator0_ci_master_result), //                              .result
+		.clk_en  (nios2_processor_custom_instruction_master_multi_slave_translator0_ci_master_clk_en), //                              .clk_en
+		.done    (nios2_processor_custom_instruction_master_multi_slave_translator0_ci_master_done),   //                              .done
+		.start   (nios2_processor_custom_instruction_master_multi_slave_translator0_ci_master_start),  //                              .start
+		.clk     (nios2_processor_custom_instruction_master_multi_slave_translator0_ci_master_clk),    //                              .clk
+		.reset   (nios2_processor_custom_instruction_master_multi_slave_translator0_ci_master_reset),  //                              .reset
+		.command (controllerlcd_0_conduit_end_readdata)                                                //                   conduit_end.readdata
 	);
 
 	Main_main_memory main_memory (
@@ -361,11 +346,6 @@ module Main (
 		.nios2_processor_instruction_master_waitrequest    (nios2_processor_instruction_master_waitrequest),                //                                            .waitrequest
 		.nios2_processor_instruction_master_read           (nios2_processor_instruction_master_read),                       //                                            .read
 		.nios2_processor_instruction_master_readdata       (nios2_processor_instruction_master_readdata),                   //                                            .readdata
-		.lcd_output_s1_address                             (mm_interconnect_0_lcd_output_s1_address),                       //                               lcd_output_s1.address
-		.lcd_output_s1_write                               (mm_interconnect_0_lcd_output_s1_write),                         //                                            .write
-		.lcd_output_s1_readdata                            (mm_interconnect_0_lcd_output_s1_readdata),                      //                                            .readdata
-		.lcd_output_s1_writedata                           (mm_interconnect_0_lcd_output_s1_writedata),                     //                                            .writedata
-		.lcd_output_s1_chipselect                          (mm_interconnect_0_lcd_output_s1_chipselect),                    //                                            .chipselect
 		.main_memory_s1_address                            (mm_interconnect_0_main_memory_s1_address),                      //                              main_memory_s1.address
 		.main_memory_s1_write                              (mm_interconnect_0_main_memory_s1_write),                        //                                            .write
 		.main_memory_s1_readdata                           (mm_interconnect_0_main_memory_s1_readdata),                     //                                            .readdata
